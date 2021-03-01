@@ -1,7 +1,13 @@
 {
-  "name": "object-utils",
+  "name": "olivejs",
+  "description": "Typescript library for simple data transformations",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
+  "author": {
+    "name": "NitzanHen",
+    "email": "nitzan.alpha@gmail.com",
+    "url": "https://github.com/NitzanHen"
+  },
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -9,6 +15,14 @@
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NitzanHen/olive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NitzanHen/olive/issues"
+  },
+  "homepage": "https://github.com/NitzanHen/olive#readme",
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.16.0",
