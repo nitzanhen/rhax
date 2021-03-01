@@ -9,4 +9,4 @@ export const clamp = (min: number, max: number, x: number) => {
   if (x < min) return min;
   else if (max < x) return max;
   else return x;
-}
+};

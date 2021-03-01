@@ -1,0 +1,91 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "quotes": [
+      "warn",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
+    "import/no-cycle": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "(^_+)|(this)"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Function": false
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "tsconfig.json",
+          "packages/*/tsconfig.json"
+        ]
+      }
+    }
+  }
+}

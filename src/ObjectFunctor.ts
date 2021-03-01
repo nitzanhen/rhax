@@ -31,7 +31,7 @@ export class ObjectFunctor<K extends string, V> extends CoreFunctor<Record<K, V>
     return CoreFunctor.of(
       //Reduce using the reducer argument
       entries.reduce((acc, [k, v]) => reducer(acc, v, k, this.value), initialValue)
-    )
+    );
   }
 
   find(query: (value: V, key: K, record: Record<K, V>) => boolean) {
@@ -39,7 +39,7 @@ export class ObjectFunctor<K extends string, V> extends CoreFunctor<Record<K, V>
 
     return CoreFunctor.of(
       entries.find(([k, v]) => query(v, k, this.value))?.[1]
-    )
+    );
   }
 
   findKey(query: (value: V, key: K, record: Record<K, V>) => boolean) {
@@ -47,6 +47,6 @@ export class ObjectFunctor<K extends string, V> extends CoreFunctor<Record<K, V>
 
     return CoreFunctor.of(
       entries.find(([k, v]) => query(v, k, this.value))?.[0]
-    )
+    );
   }
-};
+}

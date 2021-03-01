@@ -15,5 +15,5 @@ describe('utils', () => {
     for (const [min, max, x, result] of data) {
       expect(clamp(min, max, x)).toBe(result);
     }
-  })
-})
+  });
+});

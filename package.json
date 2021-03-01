@@ -5,10 +5,17 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p ./tsconfig.json"
+    "build": "tsc -p ./tsconfig.json",
+    "lint": "eslint src --ext .ts --color",
+    "lint:fix": "eslint src --ext .ts --fix --color"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.16.0",
+    "@typescript-eslint/parser": "^4.16.0",
+    "eslint": "^7.21.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.2",
     "ts-node": "^9.1.1",
