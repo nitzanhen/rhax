@@ -1,8 +1,9 @@
 {
   "name": "olivejs",
-  "description": "Typescript library for simple data transformations",
-  "version": "1.0.0",
-  "main": "index.js",
+  "description": "Typescript library for simple and elegant data transformations",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": {
     "name": "NitzanHen",
     "email": "nitzan.alpha@gmail.com",
@@ -13,7 +14,11 @@
     "test": "jest",
     "build": "tsc -p ./tsconfig.json",
     "lint": "eslint src --ext .ts --color",
-    "lint:fix": "eslint src --ext .ts --fix --color"
+    "lint:fix": "eslint src --ext .ts --fix --color",
+    "prepare": "yarn install",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -37,5 +42,12 @@
     "ts-jest": "^26.5.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.2"
-  }
+  },
+  "keywords": [
+    "Typescript",
+    "Javascript",
+    "FP",
+    "Functional programming",
+    "transformations"
+  ]
 }
