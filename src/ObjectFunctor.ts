@@ -1,8 +1,6 @@
 import BaseFunctor from './BaseFunctor';
 import { CoreFunctor } from './CoreFunctor';
-import { filter, mapFields, reduce } from './fp/object';
-import { find } from './fp/object/find';
-import { findKey } from './fp/object/findKey';
+import { filter, mapFields, reduce, find, findKey } from './fp/object';
 
 export interface ObjectFunctor<K extends string, V> extends BaseFunctor<Record<K, V>> { }
 export class ObjectFunctor<K extends string, V> {
