@@ -1,6 +1,4 @@
-//@ts-expect-error checking 
-//eslint-disable-next-line
-import { clamp } from 'fp/number';
+import { clamp } from '../fp/number';
 
 describe('utils', () => {
   test('clamp', () => {
