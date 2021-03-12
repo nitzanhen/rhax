@@ -1,6 +1,9 @@
+import BaseFunctor from './BaseFunctor';
 import { CoreFunctor } from './CoreFunctor';
 
-export class ObjectFunctor<K extends string, V> extends CoreFunctor<Record<K, V>> {
+export interface ObjectFunctor<K extends string, V> extends BaseFunctor<Record<K, V>> { }
+export class ObjectFunctor<K extends string, V> {
+
   mapFields<W>(fn: (value: V, key: K, record: Record<K, V>) => W) {
     const entries = Object.entries(this.value) as [K, V][];
 

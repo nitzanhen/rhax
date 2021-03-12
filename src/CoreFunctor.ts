@@ -1,20 +1,21 @@
+import BaseFunctor from './BaseFunctor';
 import { ExtensibleFunction } from './ExtensibleFunction';
 import { Functor } from './Functor';
 import { NumberFunctor } from './NumberFunctor';
 import { ObjectFunctor } from './ObjectFunctor';
 
 
-export class CoreFunctor<T> extends ExtensibleFunction<[], T> {
+export class CoreFunctor<T> extends ExtensibleFunction<[], T> implements BaseFunctor<T> {
 
   public readonly value: T;
 
   static of<T>(value: T) {
-    return new CoreFunctor(value) as Functor<T>;
+    return new CoreFunctor(value) as unknown as Functor<T>;
   }
 
   constructor(value: T) {
     //When called, we want to return the Functor's value.
-    super(function (this: CoreFunctor<T>) { return this.value; });
+    super(() => value);
 
     this.value = value;
     if (typeof value === 'number') {
@@ -29,9 +30,9 @@ export class CoreFunctor<T> extends ExtensibleFunction<[], T> {
     return CoreFunctor.of(fn(this.value));
   }
 
-  also(fn: (value: T) => void): this {
+  also(fn: (value: T) => void): Functor<T> {
     fn(this.value);
-    return this;
+    return CoreFunctor.of(this.value);
   }
 
   default<S>(fallback: S): Functor<NonNullable<T> | S> {
