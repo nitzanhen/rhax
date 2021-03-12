@@ -1,6 +1,7 @@
+import { clamp } from './fp/number';
+
 import BaseFunctor from './BaseFunctor';
 import { CoreFunctor } from './CoreFunctor';
-import { clamp } from './utils';
 
 export interface NumberFunctor extends BaseFunctor<number> { }
 export class NumberFunctor {
