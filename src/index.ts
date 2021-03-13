@@ -1,2 +1,3 @@
-export * from './Functor';
-export * from './CoreFunctor';
+export * from './Rhax';
+export * from './RhaxCore';
+export * from './RhaxBase';

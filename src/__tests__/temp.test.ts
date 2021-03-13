@@ -1,6 +1,6 @@
-import { take } from '../CoreFunctor';
+import { take } from '../RhaxCore';
 
-describe('Functor', () => {
+describe('temp', () => {
   test('temp', () => {
     expect(
       take({ a: 3, b: 4, c: 5 })

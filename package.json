@@ -1,5 +1,5 @@
 {
-  "name": "olivejs",
+  "name": "rhax",
   "description": "Typescript library for simple and elegant data transformations",
   "version": "0.0.0",
   "main": "lib/index.js",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NitzanHen/olive.git"
+    "url": "git+https://github.com/NitzanHen/rhax.git"
   },
   "bugs": {
-    "url": "https://github.com/NitzanHen/olive/issues"
+    "url": "https://github.com/NitzanHen/rhax/issues"
   },
-  "homepage": "https://github.com/NitzanHen/olive#readme",
+  "homepage": "https://github.com/NitzanHen/rhax#readme",
   "files": [
     "lib/**/*"
   ],
@@ -48,6 +48,7 @@
     "Javascript",
     "FP",
     "Functional programming",
-    "transformations"
+    "transformations",
+    "grape"
   ]
 }
