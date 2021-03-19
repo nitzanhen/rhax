@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/NitzanHen/rhax#readme",
   "files": [
-    "lib/**/*"
+    "lib"
   ],
   "devDependencies": {
     "@types/jest": "^26.0.20",
