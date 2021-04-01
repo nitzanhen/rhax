@@ -1,6 +1,6 @@
 import { ValueOf } from '../../types';
 
-export const filter = <O extends Record<string, unknown>>(
+export const filter = <O>(
   predicate: (value: ValueOf<O>, key: keyof O, record: O) => boolean, record: O
 ): Partial<O> =>
   (Object.entries(record) as [keyof O, ValueOf<O>][])

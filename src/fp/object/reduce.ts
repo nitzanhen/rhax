@@ -1,6 +1,6 @@
 import { ValueOf } from '../../types';
 
-export const reduce = <O extends Record<string, unknown>, A = ValueOf<O>>
+export const reduce = <O, A = ValueOf<O>>
   (
     reducer: (acc: A, value: ValueOf<O>, key: keyof O, record: O) => A, initialValue: A, record: O
   ) =>
