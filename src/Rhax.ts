@@ -1,11 +1,9 @@
 import { RhaxCore } from './RhaxCore';
 import { NumberRhax } from './NumberRhax';
 import { ObjectRhax } from './ObjectRhax';
-
-//
-/* eslint @typescript-eslint/ban-types: off */
+import { EmptyObj } from './types';
 
 export type Rhax<T> =
   & RhaxCore<T>
-  & T extends number ? NumberRhax : {}
-  & T extends Record<string, unknown> ? ObjectRhax<T> : {};
+  & T extends number ? NumberRhax : EmptyObj
+  & T extends Record<string, unknown> ? ObjectRhax<T> : EmptyObj;

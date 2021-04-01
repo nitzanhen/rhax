@@ -3,8 +3,8 @@ import { RhaxCore } from './RhaxCore';
 import { filter, mapFields, reduce, find, findKey } from './fp/object';
 import { ValueOf } from './types';
 
-export interface ObjectRhax<O extends Record<string, unknown>> extends RhaxBase<O> { }
-export class ObjectRhax<O extends Record<string, unknown>> {
+export interface ObjectRhax<O> extends RhaxBase<O> { }
+export class ObjectRhax<O> {
 
   mapFields<W>(fn: (value: ValueOf<O>, key: keyof O, record: O) => W) {
     return RhaxCore.of(mapFields(fn, this.value));
@@ -14,7 +14,7 @@ export class ObjectRhax<O extends Record<string, unknown>> {
     return RhaxCore.of(filter(predicate, this.value));
   }
 
-  reduce<A = O>(reducer: (acc: A, value: ValueOf<O>, key: keyof O, record: O) => A, initialValue: A) {
+  reduce<A = ValueOf<O>>(reducer: (acc: A, value: ValueOf<O>, key: keyof O, record: O) => A, initialValue: A) {
     return RhaxCore.of(
       reduce(reducer, initialValue, this.value)
     );
