@@ -18,6 +18,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "exclude": [
+    "lib",
     "src/__tests__"
   ]
 }
