@@ -44,5 +44,5 @@ export interface RhaxCore<T> {
   (): T
 }
 
-export const rhax = RhaxCore.of.bind({});
-export const take = RhaxCore.of.bind({});
+export const rhax = RhaxCore.of;
+export const take = RhaxCore.of;
