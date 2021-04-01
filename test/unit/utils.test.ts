@@ -1,4 +1,4 @@
-import { clamp } from '../fp/number';
+import { clamp } from 'fp';
 
 describe('utils', () => {
   test('clamp', () => {
