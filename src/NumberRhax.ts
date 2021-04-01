@@ -1,4 +1,4 @@
-import { clamp } from './fp/number';
+import { clamp } from 'fp/number';
 
 import { RhaxBase } from './RhaxBase';
 import { RhaxCore } from './RhaxCore';

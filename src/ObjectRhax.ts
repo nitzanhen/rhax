@@ -1,6 +1,7 @@
+import { filter, mapFields, reduce, find, findKey } from 'fp/object';
+
 import { RhaxBase } from './RhaxBase';
 import { RhaxCore } from './RhaxCore';
-import { filter, mapFields, reduce, find, findKey } from './fp/object';
 import { ValueOf } from './types';
 
 export interface ObjectRhax<O> extends RhaxBase<O> { }
