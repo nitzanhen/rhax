@@ -1,4 +1,5 @@
+import { ValueOf } from '../../types';
 
-export const find = <K extends string, V>(query: (value: V, key: K, record: Record<K, V>) => boolean, record: Record<K, V>) =>
-  (Object.entries(record) as [K, V][])
+export const find = <O extends Record<string, unknown>>(query: (value: ValueOf<O>, key: keyof O, record: O) => boolean, record: O) =>
+  (Object.entries(record) as [keyof O, ValueOf<O>][])
     .find(([k, v]) => query(v, k, record))?.[1];
