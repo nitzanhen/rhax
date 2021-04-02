@@ -10,6 +10,9 @@
     "declaration": true,
     "outDir": "./lib",
     "baseUrl": "./src",
+    "paths": {
+      "test-data": ["../test/testdata"]
+    },
     "removeComments": true,
     "isolatedModules": true,
     "strict": true,
