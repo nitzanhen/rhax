@@ -11,7 +11,9 @@
     "outDir": "./lib",
     "baseUrl": "./src",
     "paths": {
-      "test-data": ["../test/testdata"]
+      "test-data": [
+        "../test/testdata"
+      ]
     },
     "removeComments": true,
     "isolatedModules": true,
@@ -19,6 +21,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "importHelpers": true
   },
   "include": [
     "src",
