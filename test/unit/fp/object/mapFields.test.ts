@@ -1,7 +1,6 @@
 import { mapFields } from 'fp/object/mapFields';
 
 import * as examples from 'test-data';
-import { ValueOf } from 'types';
 
 describe('mapFields', () => {
 
