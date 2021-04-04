@@ -52,5 +52,8 @@
     "Functional programming",
     "transformations",
     "grape"
-  ]
+  ],
+  "dependencies": {
+    "tslib": "^2.1.0"
+  }
 }
