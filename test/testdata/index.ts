@@ -107,3 +107,11 @@ export const contacts = {
     occupation: 'Department manager'
   }
 };
+
+export const population = {
+  'Jerusalem': 801_000,
+  'Tel Aviv': 432_892,
+  'Haifa': 267_300,
+  'Ashdod': 224_656,
+  'Petah Tikva': 200_000
+}
