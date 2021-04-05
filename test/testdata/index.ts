@@ -114,4 +114,4 @@ export const population = {
   'Haifa': 267_300,
   'Ashdod': 224_656,
   'Petah Tikva': 200_000
-}
+};
