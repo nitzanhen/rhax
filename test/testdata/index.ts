@@ -58,7 +58,7 @@ export const contacts = {
     birthDate: 'December 23, 1970',
     zodiac: 'Capricorn',
     company: 'Opticomp',
-    Occupation: 'Commentator'
+    occupation: 'Commentator'
   },
 
   'b252d43a-9603-4a25-846b-5d490992c706': {
@@ -68,7 +68,7 @@ export const contacts = {
     birthDate: 'February 13, 1938',
     zodiac: 'Aquarius',
     company: 'Peaches',
-    Occupation: 'Condominium association manager'
+    occupation: 'Condominium association manager'
   },
   '7ceae743-a5a9-4374-a6e3-16fac52c81f5': {
     ssn: '354-36-XXXX',
@@ -77,7 +77,7 @@ export const contacts = {
     birthDate: 'July 11, 1967',
     zodiac: 'Cancer',
     company: 'Omni Superstore',
-    Occupation: 'Hotel detective'
+    occupation: 'Hotel detective'
   },
   '037b9d3b-ec82-478f-94dd-494b1b52e176': {
     ssn: '765-14-XXXX',
@@ -86,7 +86,7 @@ export const contacts = {
     birthDate: 'January 8, 1988',
     zodiac: 'Capricorn',
     company: 'Rustler Steak House',
-    Occupation: 'Front office manager'
+    occupation: 'Front office manager'
   },
   '286e7e01-898c-45aa-a472-a42ee934a63e': {
     ssn: '261-57-XXXX',
@@ -95,7 +95,7 @@ export const contacts = {
     birthDate: 'July 15, 1978',
     zodiac: 'Cancer',
     company: 'One-Up Realty',
-    Occupation: 'Human service worker'
+    occupation: 'Human service worker'
   },
   'a923a8ba-99a2-4b29-8930-c3db7d594d04': {
     ssn: '017-24-XXXX',
@@ -104,6 +104,14 @@ export const contacts = {
     birthDate: 'May 21, 1946',
     zodiac: 'Gemini',
     company: 'Packer',
-    Occupation: 'Department manager'
+    occupation: 'Department manager'
   }
+};
+
+export const population = {
+  'Jerusalem': 801_000,
+  'Tel Aviv': 432_892,
+  'Haifa': 267_300,
+  'Ashdod': 224_656,
+  'Petah Tikva': 200_000
 };
