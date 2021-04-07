@@ -2,8 +2,8 @@
   "name": "rhax",
   "description": "Typescript library for simple and elegant data transformations",
   "version": "1.0.0-beta.2",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": {
     "name": "NitzanHen",
     "email": "nitzan.alpha@gmail.com",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "prebuild": "rimraf lib",
+    "prebuild": "rimraf dist",
     "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/NitzanHen/rhax#readme",
   "files": [
-    "lib"
+    "dist"
   ],
   "devDependencies": {
     "@types/jest": "^26.0.20",

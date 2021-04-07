@@ -8,7 +8,7 @@
       "esnext"
     ],
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
       "test-data": [
@@ -28,6 +28,6 @@
     "test"
   ],
   "exclude": [
-    "lib",
+    "dist",
   ]
 }
