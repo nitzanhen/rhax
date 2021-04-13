@@ -25,10 +25,5 @@ However, the world of FP has many deep concepts - some rooted in abstract mathem
 ### FP and types
 Another point is that FP - and its concepts of declarability and function purity in particular - deal extremely well with type systems. It can make a big difference in developer experience and in quality (elegance, brevity _and_ maintainability). This is mostly true for Typescript developers, but can also assist plain Javascript developers through the intellisense features of modern IDEs.
 
-This is best explained through an example:
-
-
-
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
