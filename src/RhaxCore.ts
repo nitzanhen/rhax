@@ -14,7 +14,7 @@ export class RhaxCore<T> extends ExtensibleFunction<[], T> implements RhaxBase<T
   }
 
   constructor(value: T) {
-    //When called, we want to return the Functor's value.
+    //When called, we want to return the value.
     super(() => value);
 
     this.value = value;
