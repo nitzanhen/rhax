@@ -6,7 +6,7 @@
 Rhax is a Typescript-first library for simple and elegant data transformations.<br/>
 It was created with the "casual" Typescript functional programmer in mind, and aims to provide the advantages of functional programming, without requiring the programmer to surrender the entire codebase to the paradigm's constraints, restrictive methods, and ocean of jargon.
 
-However, even if you don't use Typescript, or don't know what Functional Programming is, RHax can still be of use for you!
+However, even if you don't use Typescript, or don't know what Functional Programming is, Rhax can still be of use for you!
 
 It is lightweight, easy to pick up, and simple to introduce to new as well as existing projects.
 
@@ -85,7 +85,7 @@ Therefore,
 ```
 is a valid expression (and evaluates to `{ b: 4 }`), while
 ```ts
-  take({ 34 }).filter(v => v % 2 === 0)()
+  take(34).filter(v => v % 2 === 0)()
 ```
 is invalid.
 
