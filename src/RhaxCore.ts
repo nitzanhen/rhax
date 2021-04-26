@@ -1,11 +1,10 @@
 import { RhaxBase } from './RhaxBase';
-import { ExtensibleFunction } from './ExtensibleFunction';
 import { Rhax } from './Rhax';
 import { NumberRhax } from './NumberRhax';
 import { ObjectRhax } from './ObjectRhax';
 
 
-export class RhaxCore<T> extends ExtensibleFunction<[], T> implements RhaxBase<T> {
+export class RhaxCore<T> extends Function implements RhaxBase<T> {
 
   public readonly value: T;
 
@@ -15,7 +14,7 @@ export class RhaxCore<T> extends ExtensibleFunction<[], T> implements RhaxBase<T
 
   constructor(value: T) {
     //When called, we want to return the value.
-    super(() => value);
+    super('return this.value');
 
     this.value = value;
     if (typeof value === 'number') {
@@ -24,6 +23,8 @@ export class RhaxCore<T> extends ExtensibleFunction<[], T> implements RhaxBase<T
     if (typeof value === 'object') {
       Object.assign(this, ObjectRhax.prototype);
     }
+
+    return this.bind(this);
   }
 
   map<S>(fn: (value: T) => S): Rhax<S> {
