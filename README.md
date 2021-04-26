@@ -85,11 +85,12 @@ Therefore,
 ```
 is a valid expression (and evaluates to `{ b: 4 }`), while
 ```ts
+  //Invalid code!
   take(34).filter(v => v % 2 === 0)()
 ```
 is invalid.
 
-To clarify, "invalid" means that the code will fail at runtime, and Typescript (if present) will flag it as an error.
+To clarify, "invalid" means that the code will fail at runtime *and* Typescript (if present) will flag it as an error.
 
 Other entities have specific transformations defined for them as well. Also, there exist common methods, available for all types. The details are documented below. 
 
@@ -103,9 +104,13 @@ RhaxCore.of(x)
 rhax(x)
 ```
 
-`RhaxCore.of`, a static method of `RhaxCore`, accepts any value and wraps it in a `RhaxCore` instance.
+These functions accept any value, wrap it in a `RhaxCore` instance and dynamically add methods to the instance, based on the value's type.
+`RhaxCore` as a class contains the methods common to all types. 
+Aside from `RhaxCore`, a *type-specific class* exists for each data type that has special functionality, e.g. `ObjectRhax` or `NumberRhax`. 
 
-`RhaxCore`, as its name suggests, is the core of the library's functionality.
+> Avoid using the `RhaxCore` constructor, or any of the type-specific classes' constructors, directly. They're not intended to be called directly, and may result in unintended behavior.
+ 
+ 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
