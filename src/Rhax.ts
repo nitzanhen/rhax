@@ -10,19 +10,19 @@ export type Rhax<T> =
 
 type RhaxConstructor = new <T>(value: T) => Rhax<T>;
 
-export const Rhax = function RhaxClass<T>(value: T) {
-  const self = () => value;
+export const Rhax = function Rhax<T>(value: T) {
+  const rhax = () => value;
 
-  self.value = value;
-  Object.assign(self, RhaxCommon.prototype);
+  rhax.value = value;
+  Object.assign(rhax, RhaxCommon.prototype);
   if (typeof value === 'number') {
-    Object.assign(self, RhaxNumber.prototype);
+    Object.assign(rhax, RhaxNumber.prototype);
   }
   if (typeof value === 'object') {
-    Object.assign(self, RhaxObject.prototype);
+    Object.assign(rhax, RhaxObject.prototype);
   }
 
-  return self as Rhax<T>;
+  return rhax as Rhax<T>;
 } as unknown as RhaxConstructor;
 
 export const rhax = <T>(value: T) => new Rhax(value);
