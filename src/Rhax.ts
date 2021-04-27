@@ -1,3 +1,5 @@
+import { methodsOf } from 'utils/methodsOf';
+
 import { RhaxCommon } from './RhaxCommon';
 import { RhaxNumber } from './RhaxNumber';
 import { RhaxObject } from './RhaxObject';
@@ -10,17 +12,20 @@ export type Rhax<T> =
 
 type RhaxConstructor = new <T>(value: T) => Rhax<T>;
 
+const commonMethods = methodsOf(RhaxCommon);
+const numberMethods = methodsOf(RhaxNumber);
+const objectMethods = methodsOf(RhaxObject);
+
 export const Rhax = function Rhax<T>(value: T) {
   const rhax = () => value;
 
   rhax.value = value;
-  Object.assign(rhax, RhaxCommon);
-  console.log(Object.getOwnPropertyNames(RhaxCommon.prototype), Object.getOwnPropertyNames(RhaxNumber.prototype));
+  Object.assign(rhax, commonMethods);
   if (typeof value === 'number') {
-    Object.assign(rhax, RhaxNumber.prototype);
+    Object.assign(rhax, numberMethods);
   }
   if (typeof value === 'object') {
-    Object.assign(rhax, RhaxObject.prototype);
+    Object.assign(rhax, objectMethods);
   }
 
   return rhax as Rhax<T>;
