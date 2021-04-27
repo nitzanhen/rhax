@@ -1,34 +1,34 @@
 import { filter, mapFields, reduce, find, findKey } from 'fp/object';
+import { rhax } from 'Rhax';
 
 import { RhaxBase } from './RhaxBase';
-import { RhaxCore } from './RhaxCore';
 import { ValueOf } from './types';
 
-export interface ObjectRhax<O> extends RhaxBase<O> { }
-export class ObjectRhax<O> {
+export interface RhaxObject<O> extends RhaxBase<O> { }
+export class RhaxObject<O> {
 
   mapFields<W>(fn: (value: ValueOf<O>, key: keyof O, record: O) => W) {
-    return RhaxCore.of(mapFields(fn, this.value));
+    return rhax(mapFields(fn, this.value));
   }
 
   filter(predicate: (value: ValueOf<O>, key: keyof O, record: O) => boolean) {
-    return RhaxCore.of(filter(predicate, this.value));
+    return rhax(filter(predicate, this.value));
   }
 
   reduce<A = ValueOf<O>>(reducer: (acc: A, value: ValueOf<O>, key: keyof O, record: O) => A, initialValue: A) {
-    return RhaxCore.of(
+    return rhax(
       reduce(reducer, initialValue, this.value)
     );
   }
 
   find(query: (value: ValueOf<O>, key: keyof O, record: O) => boolean) {
-    return RhaxCore.of(
+    return rhax(
       find(query, this.value)
     );
   }
 
   findKey(query: (value: ValueOf<O>, key: keyof O, record: O) => boolean) {
-    return RhaxCore.of(
+    return rhax(
       findKey(query, this.value)
     );
   }

@@ -1,3 +1,3 @@
 export * from './Rhax';
-export * from './RhaxCore';
+export * from './RhaxCommon';
 export * from './RhaxBase';
