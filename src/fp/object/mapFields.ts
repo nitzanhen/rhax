@@ -1,4 +1,4 @@
-import { ValueOf } from '../../types';
+import { ValueOf } from '../../utils/types';
 
 export type Mapped<O, W> = {
   [K in keyof O]: W

@@ -2,7 +2,7 @@ import { filter, mapFields, reduce, find, findKey } from 'fp/object';
 import { rhax } from 'Rhax';
 
 import { RhaxBase } from './RhaxBase';
-import { ValueOf } from './types';
+import { ValueOf } from './utils/types';
 
 export interface RhaxObject<O> extends RhaxBase<O> { }
 export class RhaxObject<O> {

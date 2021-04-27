@@ -1,7 +1,7 @@
 import { RhaxCommon } from './RhaxCommon';
 import { RhaxNumber } from './RhaxNumber';
 import { RhaxObject } from './RhaxObject';
-import { EmptyObj } from './types';
+import { EmptyObj } from './utils/types';
 
 export type Rhax<T> =
   & RhaxCommon<T>
@@ -14,7 +14,8 @@ export const Rhax = function Rhax<T>(value: T) {
   const rhax = () => value;
 
   rhax.value = value;
-  Object.assign(rhax, RhaxCommon.prototype);
+  Object.assign(rhax, RhaxCommon);
+  console.log(Object.getOwnPropertyNames(RhaxCommon.prototype), Object.getOwnPropertyNames(RhaxNumber.prototype));
   if (typeof value === 'number') {
     Object.assign(rhax, RhaxNumber.prototype);
   }

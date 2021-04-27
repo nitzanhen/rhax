@@ -1,4 +1,4 @@
-import { ValueOf } from '../../types';
+import { ValueOf } from '../../utils/types';
 
 export const reduce = <O, A = ValueOf<O>>
   (
