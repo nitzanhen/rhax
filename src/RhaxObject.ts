@@ -1,6 +1,6 @@
 import { filter, mapFields, reduce, find, findKey } from 'fp/object';
-import { rhax } from 'Rhax';
 
+import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
 import { ValueOf } from './utils/types';
 

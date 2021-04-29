@@ -1,6 +1,6 @@
 import { clamp } from 'fp/number';
-import { rhax } from 'Rhax';
 
+import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
 
 export interface RhaxNumber extends RhaxBase<number> { }

@@ -10,7 +10,6 @@ describe('RhaxCommon', () => {
 
     for (const val of values) {
       const cb = jest.fn();
-      console.log(take(val));
       take(val).also(cb)();
 
       expect(cb).toHaveBeenCalledTimes(1);
