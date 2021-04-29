@@ -20,14 +20,16 @@ const bundle = config => ({
 
 export default [
   bundle({
-    plugins: [esbuild()],
-    output: [
-      {
-        file: `${name}.js`,
-        format: 'cjs',
-        sourcemap: true,
-      },
-    ],
+    plugins: [esbuild({
+      target: 'es6',
+      minify: true,
+      experimentalBundling: true
+    })],
+    output: {
+      file: `${name}.js`,
+      format: 'cjs',
+      sourcemap: false,
+    },
   }),
   bundle({
     plugins: [dts()],
