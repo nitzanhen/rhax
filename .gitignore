@@ -137,3 +137,5 @@ dist
 lib
 
 .devcontainer
+
+.temp

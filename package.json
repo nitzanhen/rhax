@@ -14,6 +14,7 @@
     "test": "jest",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
+    "postbuild": "rimraf .temp",
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
     "prepublishOnly": "yarn lint && yarn test",
@@ -31,6 +32,7 @@
     "dist"
   ],
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.1",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.16.0",
     "@typescript-eslint/parser": "^4.16.0",

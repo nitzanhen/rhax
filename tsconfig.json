@@ -8,12 +8,13 @@
       "esnext"
     ],
     "declaration": true,
-    "outDir": "./dist",
+    "emitDeclarationOnly": true,
+    "declarationDir": ".temp/dts",
     "baseUrl": "./src",
     "paths": {
       "test-data": [
         "../test/testdata"
-      ]
+      ],
     },
     "removeComments": true,
     "isolatedModules": true,

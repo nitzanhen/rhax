@@ -1,7 +1,6 @@
 import dts from 'rollup-plugin-dts';
+import typescript from '@rollup/plugin-typescript';
 import esbuild from 'rollup-plugin-esbuild';
-
-import pkg from './package.json';
 
 /**
  * Based on config at
@@ -10,32 +9,34 @@ import pkg from './package.json';
  * @todo research mjs format output (configured in the link above) - advantages, popularity, etc.
  */
 
-const name = pkg.main.replace(/\.js$/, '');
-
-const bundle = config => ({
-  ...config,
-  input: 'src/index.ts',
-  //external: id => !/^[./]/.test(id),
-});
-
 export default [
-  bundle({
+  {
+    input: 'src/index.ts',
     plugins: [esbuild({
       target: 'es6',
       minify: true,
       experimentalBundling: true
     })],
     output: {
-      file: `${name}.js`,
+      file: 'dist/index.js',
       format: 'cjs',
       sourcemap: false,
     },
-  }),
-  bundle({
+  },
+  {
+    input: 'src/index.ts',
+    plugins: [typescript({ tsconfig: './tsconfig.build.json' })],
+    output: {
+      dir: '.temp',
+      format: 'cjs'
+    }
+  },
+  {
+    input: '.temp/dts/index.d.ts',
     plugins: [dts()],
     output: {
-      file: `${name}.d.ts`,
+      file: 'dist/index.d.ts',
       format: 'es',
     },
-  }),
+  },
 ];
