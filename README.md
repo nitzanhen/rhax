@@ -3,12 +3,14 @@
 ![npm](https://img.shields.io/npm/v/rhax?color=green)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/rhax?color=yellow)
 
-Rhax is a Typescript-first library for simple and elegant data transformations.<br/>
+Rhax (ῥάξ - Ancient Greek for "grape") is a Typescript-first library for simple and elegant data transformations.<br/>
 It was created with the "casual" Typescript functional programmer in mind, and aims to provide the advantages of functional programming, without requiring the programmer to surrender the entire codebase to the paradigm's constraints, restrictive methods, and ocean of jargon.
 
 However, even if you don't use Typescript, or don't know what Functional Programming is, Rhax can still be of use for you!
 
 It is lightweight, easy to pick up, and simple to introduce to new as well as existing projects.
+
+---
 
 ## Installation
 ```bash
@@ -16,7 +18,7 @@ npm install rhax
 # or
 yarn add rhax
 ```
-
+---
 ## The idea
 [Functional programming](https://hackr.io/blog/functional-programming) (FP) is a progamming paradigm founded on the ideas of immutability, function purity, and others. It has become increasingly popular over the past few years, and its benefits shine in a variety of applications. Most popular modern languages (JS/TS included) have FP capabilities, and you, like most developers of those languages, are probably already using FP to some degree, perhaps without realizing it. If you're interested in diving into FP, I recommend [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://mostly-adequate.gitbook.io/mostly-adequate-guide/), but there are [many other good resources](https://github.com/xgrommx/awesome-functional-programming).
 
@@ -96,21 +98,22 @@ Other entities have specific transformations defined for them as well. Also, the
 
 ### RhaxCore and method classes
 
-`take` is actually just an elegant alias for `RhaxCore.of`. `rhax` is also an alias of theirs, so the following are equivalent:
+`take(x)` is actually just an elegant alias for `new Rhax(x)`. `rhax` is also an alias of theirs, so the following are equivalent:
 ```ts
+new Rhax(x)
 take(x)
-RhaxCore.of(x)
-//This is another alias!
 rhax(x)
 ```
+Use whichever one is most convenient for you.
 
-These functions accept any value, wrap it in a `RhaxCore` instance and dynamically add methods to the instance, based on the value's type.
-`RhaxCore` as a class contains the methods common to all types. 
-Aside from `RhaxCore`, a *type-specific class* exists for each data type that has special functionality, e.g. `ObjectRhax` or `NumberRhax`. 
+These functions accept any value, wrap it in a `Rhax` instance and dynamically add methods to the instance, based on the value's type. These methods are grouped by type - 
+a *type-specific class* exists for each data type that has special functionality, e.g. `RhaxObject` or `RhaxNumber`, and the `RhaxCommon` class contains the methods common to all types.
 
-> Avoid using the `RhaxCore` constructor, or any of the type-specific classes' constructors, directly. They're not intended to be called directly, and may result in unintended behavior.
- 
- 
+> Avoid using any of the type-specific classes' constructors directly. They're not intended to be called directly, and may result in unintended behavior. In constrast, the `Rhax` constructor itself _is_ safe. 
+
+### RhaxCommon
+### RhaxNumber
+### RhaxObject
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
