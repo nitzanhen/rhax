@@ -1,9 +1,9 @@
-import { methodsOf } from './utils/methodsOf';
+import { methodsOf } from 'utils/methodsOf';
+import { EmptyObj } from 'utils/types';
 
-import { RhaxCommon } from './RhaxCommon';
-import { RhaxNumber } from './RhaxNumber';
-import { RhaxObject } from './RhaxObject';
-import { EmptyObj } from './utils/types';
+import { RhaxCommon } from 'RhaxCommon';
+import { RhaxNumber } from 'RhaxNumber';
+import { RhaxObject } from 'RhaxObject';
 
 export type Rhax<T> =
   & RhaxCommon<T>

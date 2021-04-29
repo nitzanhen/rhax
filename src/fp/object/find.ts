@@ -1,4 +1,4 @@
-import { ValueOf } from '../../utils/types';
+import { ValueOf } from 'utils/types';
 
 export const find = <O>(query: (value: ValueOf<O>, key: keyof O, record: O) => boolean, record: O) =>
   (Object.entries(record) as [keyof O, ValueOf<O>][])
