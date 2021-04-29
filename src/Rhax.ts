@@ -1,4 +1,4 @@
-import { methodsOf } from 'utils/methodsOf';
+import { methodsOf } from './utils/methodsOf';
 
 import { RhaxCommon } from './RhaxCommon';
 import { RhaxNumber } from './RhaxNumber';
