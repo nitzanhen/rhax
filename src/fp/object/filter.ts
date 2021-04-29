@@ -1,4 +1,4 @@
-import { ValueOf } from 'utils/types';
+import { ValueOf } from '../../utils/types';
 
 export const filter = <O>(
   predicate: (value: ValueOf<O>, key: keyof O, record: O) => boolean, record: O
