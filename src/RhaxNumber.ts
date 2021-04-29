@@ -7,6 +7,6 @@ export interface RhaxNumber extends RhaxBase<number> { }
 export class RhaxNumber {
 
   clamp(min: number, max: number) {
-    return rhax(clamp(this.value, min, max));
+    return rhax(clamp(min, max, this.value));
   }
 }
