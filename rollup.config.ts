@@ -13,9 +13,8 @@ export default [
   {
     input: 'src/index.ts',
     plugins: [esbuild({
-      target: 'es6',
+      target: 'es2015',
       minify: true,
-      experimentalBundling: true
     })],
     output: {
       file: 'dist/index.js',
