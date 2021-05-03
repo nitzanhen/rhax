@@ -54,7 +54,7 @@ export const contacts = {
   'c114ca96-3363-4b77-b9d7-2d2bcd35ed8d': {
     ssn: '522-24-XXXX',
     name: 'Anthony A. Davidson',
-    email: 'AnthonyADavidson@jourrapide.com ',
+    email: 'AnthonyADavidson@jourrapide.com',
     birthDate: 'December 23, 1970',
     zodiac: 'Capricorn',
     company: 'Opticomp',
@@ -64,7 +64,7 @@ export const contacts = {
   'b252d43a-9603-4a25-846b-5d490992c706': {
     ssn: '632-82-XXXX',
     name: 'Michael W. Conway',
-    email: 'MichaelWConway@teleworm.us ',
+    email: 'MichaelWConway@teleworm.us',
     birthDate: 'February 13, 1938',
     zodiac: 'Aquarius',
     company: 'Peaches',
@@ -91,7 +91,7 @@ export const contacts = {
   '286e7e01-898c-45aa-a472-a42ee934a63e': {
     ssn: '261-57-XXXX',
     name: 'Justin C. Kaufman',
-    email: 'JustinCKaufman@jourrapide.com ',
+    email: 'JustinCKaufman@jourrapide.com',
     birthDate: 'July 15, 1978',
     zodiac: 'Cancer',
     company: 'One-Up Realty',

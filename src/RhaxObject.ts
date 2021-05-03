@@ -1,4 +1,4 @@
-import { filter, mapFields, reduce, find, findKey } from './fp/object';
+import { filter, mapFields, reduce, find, findKey, groupBy } from './fp/object';
 
 import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
@@ -30,6 +30,12 @@ export class RhaxObject<O> {
   findKey(query: (value: ValueOf<O>, key: keyof O, record: O) => boolean) {
     return rhax(
       findKey(query, this.value)
+    );
+  }
+
+  groupBy<T extends string | number | symbol>(tagger: (value: ValueOf<O>, key: keyof O, record: O) => T) {
+    return rhax(
+      groupBy(tagger, this.value)
     );
   }
 }
