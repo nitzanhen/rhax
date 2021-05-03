@@ -16,4 +16,8 @@ export class RhaxCommon<T> {
   default<S>(fallback: S): Rhax<NonNullable<T> | S> {
     return rhax(this.value ?? fallback);
   }
+
+  cast<C>(): Rhax<C> {
+    return this as Rhax<C>;
+  }
 }
