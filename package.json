@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NitzanHen/rhax.git"
+    "url": "git+https://github.com/rhaxjs/rhax.git"
   },
   "bugs": {
-    "url": "https://github.com/NitzanHen/rhax/issues"
+    "url": "https://github.com/rhaxjs/rhax/issues"
   },
-  "homepage": "https://github.com/NitzanHen/rhax#readme",
+  "homepage": "https://github.com/rhaxjs/rhax/#readme",
   "files": [
     "dist"
   ],
