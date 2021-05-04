@@ -1,7 +1,9 @@
 import { groupBy } from 'fp/array/groupBy';
 import { indexBy } from 'fp/array/indexBy';
-import { rhax } from 'Rhax';
-import { RhaxBase } from 'RhaxBase';
+
+import { rhax } from './Rhax';
+import { RhaxBase } from './RhaxBase';
+
 
 export interface RhaxArray<E> extends RhaxBase<E[]> { }
 export class RhaxArray<E> {
