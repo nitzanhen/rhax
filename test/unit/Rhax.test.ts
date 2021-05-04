@@ -77,8 +77,8 @@ describe('Rhax', () => {
     }
   });
 
-  test("take(val) has no methods from RhaxNumber if val isn't an object", () => {
-    const nonObjects = [3, true, false, '3'];
+  test("take(val) has no methods from RhaxObject if val isn't an object", () => {
+    const nonObjects = [3, true, false, '3', [3]];
 
     for (const val of nonObjects) {
       const r = take(val);

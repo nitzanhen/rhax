@@ -4,16 +4,24 @@ import { EmptyObj } from './utils/types';
 import { RhaxCommon } from './RhaxCommon';
 import { RhaxNumber } from './RhaxNumber';
 import { RhaxObject } from './RhaxObject';
+import { RhaxArray } from './RhaxArray';
 
 export type Rhax<T> =
   & RhaxCommon<T>
-  & T extends number ? RhaxNumber : EmptyObj
-  & T extends Record<string, unknown> ? RhaxObject<T> : EmptyObj;
+  & (T extends number ? RhaxNumber : EmptyObj)
+  & (T extends (infer E)[]
+    ? RhaxArray<E>
+    : (T extends Record<string, unknown>
+      ? RhaxObject<T>
+      : EmptyObj
+    )
+  );
 
 type RhaxConstructor = new <T>(value: T) => Rhax<T>;
 
 const commonMethods = methodsOf(RhaxCommon);
 const numberMethods = methodsOf(RhaxNumber);
+const arrayMethods = methodsOf(RhaxArray);
 const objectMethods = methodsOf(RhaxObject);
 
 export const Rhax = function Rhax<T>(value: T) {
@@ -24,7 +32,10 @@ export const Rhax = function Rhax<T>(value: T) {
   if (typeof value === 'number') {
     Object.assign(rhax, numberMethods);
   }
-  if (typeof value === 'object') {
+  if (Array.isArray(value)) {
+    Object.assign(rhax, arrayMethods);
+  }
+  else if (typeof value === 'object') {
     Object.assign(rhax, objectMethods);
   }
 
