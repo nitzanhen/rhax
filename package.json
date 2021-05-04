@@ -17,7 +17,7 @@
     "postbuild": "rimraf .temp",
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
-    "prepublishOnly": "yarn lint && yarn test",
+    "prepublishOnly": "yarn lint && yarn test && yarn build",
     "typecheck": "tsc -p ./tsconfig.json --pretty --noEmit"
   },
   "repository": {
