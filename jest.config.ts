@@ -7,5 +7,11 @@ export default {
   },
   roots: [
     'test'
-  ]
+  ],
+  globals: {
+
+    'ts-jest': {
+      tsConfig: '<rootDir>/test/tsconfig.json'
+    }
+  }
 };
