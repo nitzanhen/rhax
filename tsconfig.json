@@ -10,12 +10,6 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "declarationDir": ".temp/dts",
-    "baseUrl": "./src",
-    "paths": {
-      "test-data": [
-        "../test/testdata"
-      ],
-    },
     "removeComments": true,
     "isolatedModules": true,
     "strict": true,

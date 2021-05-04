@@ -1,5 +1,5 @@
-import { groupBy } from 'fp/array/groupBy';
-import { indexBy } from 'fp/array/indexBy';
+import { groupBy } from './fp/array/groupBy';
+import { indexBy } from './fp/array/indexBy';
 
 import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
