@@ -19,7 +19,7 @@ export default [
     output: {
       file: 'dist/index.js',
       format: 'cjs',
-      sourcemap: false,
+      sourcemap: true,
     },
   },
   {
