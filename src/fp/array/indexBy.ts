@@ -3,4 +3,4 @@ export const indexBy = <E, T extends string | number | symbol>(indexer: (element
   array.reduce((record, element, index) => {
     const key = indexer(element, index, array);
     return { ...record, [key]: element };
-  });
+  }, {} as Partial<Record<T, E>>);
