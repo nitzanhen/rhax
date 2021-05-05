@@ -9,9 +9,9 @@ export default {
     'test'
   ],
   globals: {
-
     'ts-jest': {
       tsconfig: '<rootDir>/test/tsconfig.json'
     }
-  }
+  },
+  collectCoverage: true
 };
