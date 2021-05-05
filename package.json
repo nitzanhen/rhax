@@ -1,7 +1,7 @@
 {
   "name": "rhax",
   "description": "Typescript library for simple and elegant data transformations",
-  "version": "1.0.0-beta.16",
+  "version": "1.0.0-beta.15",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": {
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NitzanHen/rhax.git"
+    "url": "git+https://github.com/rhaxjs/rhax.git"
   },
   "bugs": {
-    "url": "https://github.com/NitzanHen/rhax/issues"
+    "url": "https://github.com/rhaxjs/rhax/issues"
   },
-  "homepage": "https://github.com/NitzanHen/rhax#readme",
+  "homepage": "https://github.com/rhaxjs/rhax/#readme",
   "files": [
     "dist"
   ],
