@@ -1,0 +1,13 @@
+name: Test Coverage
+
+on: 
+  push:
+    branches: [ main ]
+  
+jobs:
+  coverage:
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v1
+      with:
+      name: rhax-codecov
+      flags: unittests
