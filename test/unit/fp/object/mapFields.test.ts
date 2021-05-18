@@ -2,7 +2,7 @@ import { mapFields } from 'fp/object/mapFields';
 
 import * as examples from 'test-data';
 
-describe('mapFields', () => {
+describe('fp/object/mapFields', () => {
 
   test('With any predicate, the keys of the output match the keys of the input', () => {
     for (const example of Object.values(examples)) {

@@ -2,7 +2,7 @@ import { findKey } from 'fp/object';
 
 import * as examples from 'test-data';
 
-describe('findKey', () => {
+describe('fp/object/findKey', () => {
   test('Constant false returns undefined', () => {
     expect(findKey(() => false, examples.basic)).toBe(undefined);
     expect(findKey(() => false, examples.lotsOfFields)).toBe(undefined);
