@@ -8,5 +8,5 @@ export const groupBy = <O, T extends string | number | symbol>(tagger: (value: V
       const tag = tagger(v, k, record);
       return { ...groups, [tag]: groups[tag] ? [...groups[tag]!, v] : [v] };
     },
-    {} as Partial<Record<T, ValueOf<O>[]>>, record
+    {} as Record<T, ValueOf<O>[]>, record
   );
