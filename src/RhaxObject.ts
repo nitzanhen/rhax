@@ -1,4 +1,6 @@
 import { filter, mapFields, reduce, find, findKey, groupBy } from './fp/object';
+import { omit } from './fp/object/omit';
+import { pick } from './fp/object/pick';
 
 import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
@@ -36,6 +38,18 @@ export class RhaxObject<O> {
   groupBy<T extends string | number | symbol>(tagger: (value: ValueOf<O>, key: keyof O, record: O) => T) {
     return rhax(
       groupBy(tagger, this.value)
+    );
+  }
+
+  pick<K extends keyof O>(keys: K[]) {
+    return rhax(
+      pick(keys, this.value)
+    );
+  }
+
+  omit<K extends keyof O>(keys: K[]) {
+    return rhax(
+      omit(keys, this.value)
     );
   }
 }
