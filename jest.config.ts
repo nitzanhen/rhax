@@ -13,4 +13,7 @@ export default {
       tsconfig: '<rootDir>/test/tsconfig.json'
     }
   },
+  collectCoverageFrom: [
+    'src/**/*'
+  ]
 };
