@@ -2,7 +2,7 @@ import { reduce } from 'fp/object/reduce';
 
 import * as examples from 'test-data';
 
-describe('reduce', () => {
+describe('fp/object/reduce', () => {
 
   test('Empty object is reduced to initial value with any reducer', () => {
     expect(reduce((acc, v) => `${acc}${v}`, '', examples.empty)).toEqual('');

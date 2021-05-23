@@ -2,7 +2,7 @@ import { find } from 'fp/object';
 
 import * as examples from 'test-data';
 
-describe('find', () => {
+describe('fp/object/find', () => {
   test('Constant false returns undefined', () => {
     expect(find(() => false, examples.basic)).toBe(undefined);
     expect(find(() => false, examples.lotsOfFields)).toBe(undefined);

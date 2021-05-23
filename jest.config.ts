@@ -13,5 +13,4 @@ export default {
       tsconfig: '<rootDir>/test/tsconfig.json'
     }
   },
-  collectCoverage: true
 };

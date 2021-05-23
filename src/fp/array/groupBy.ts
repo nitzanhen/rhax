@@ -6,6 +6,6 @@ export const groupBy = <E, T extends string | number | symbol>(tagger: (element:
       const tag = tagger(e, i, array);
       return { ...groups, [tag]: groups[tag] ? [...groups[tag]!, e] : [e] };
     },
-    {} as Partial<Record<T, E[]>>,
+    {} as Record<T, E[]>,
     array
   );
