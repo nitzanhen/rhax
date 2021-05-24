@@ -27,12 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Publish version
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: yarn version --new-version $(yarn info . version)_$(date +"%Y.%m.%d-%H:%M:%S") --no-git-tag-version
-      - run: yarn publish --tag unstable
+      - name: Increment version
+        run: yarn version --new-version $(yarn info . version)-$(date +"%Y.%m.%d-%H.%M.%S") --no-git-tag-version
+      - name: Publish version
+        run: yarn publish --tag unstable
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
