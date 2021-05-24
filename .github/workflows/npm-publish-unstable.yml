@@ -30,9 +30,10 @@ jobs:
       - name: Get package.json
         id: get-package
         run: echo "::set-output name=package::$(cat ./package.json)"
+      - run: echo "::debug::steps.get-package.outputs.package"
       - name: Get package version
         id: get-version
-        run: echo "::debug::steps.get-package.outputs.package" && echo "::set-output name=version::${{ fromJSON(steps.get-package.outputs.package).version }}"
+        run: echo "::set-output name=version::${{ fromJSON(steps.get-package.outputs.package).version }}"
       - name: Publish version
         uses: actions/setup-node@v2
         with:
