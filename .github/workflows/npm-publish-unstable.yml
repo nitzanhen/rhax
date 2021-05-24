@@ -27,18 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Get package.json
-        id: get-package
-        run: echo "::set-output name=package::$(cat ./package.json)"
-      - run: echo "::debug::${{ steps.get-package.outputs.package }}"
-      - name: Get package version
-        id: get-version
-        run: echo "::set-output name=version::${{ fromJSON(steps.get-package.outputs.package).version }}"
       - name: Publish version
         uses: actions/setup-node@v2
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: yarn publish --new-version ${{ steps.get-version.outputs.version }}_$(date +"%Y.%m.%d-%H:%M:%S") --tag unstable
+      - run: yarn publish --new-version $(yarn info . version)_$(date +"%Y.%m.%d-%H:%M:%S") --tag unstable
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
