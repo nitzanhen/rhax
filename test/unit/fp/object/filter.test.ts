@@ -3,7 +3,7 @@ import { filter } from 'fp/object/filter';
 import * as examples from 'test-data';
 
 
-describe('filter', () => {
+describe('fp/object/filter', () => {
   test('Constant false returns an empty object', () => {
     expect(filter(() => false, examples.basic)).toEqual({});
     expect(filter(() => false, examples.lotsOfFields)).toEqual({});

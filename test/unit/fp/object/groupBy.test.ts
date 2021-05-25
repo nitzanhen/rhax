@@ -1,7 +1,7 @@
 import { groupBy, mapFields } from 'fp/object';
 import * as examples from 'test-data';
 
-describe('groupBy', () => {
+describe('fp/object/groupBy', () => {
   test('Constant tagger takes all elements to single field', () => {
     for (const data of Object.entries(examples)) {
       const values = Object.values(data);
