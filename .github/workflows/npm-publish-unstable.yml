@@ -31,7 +31,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: echo "$(npm view . version)-$(date +"%Y.%m.%d-%H.%M.%S")"
+      - name: Determine next version tag
+        uses: rhaxjs/npm-update-action@v1.0
+        with:
+          repo: rhax
       - name: Increment version
         run: yarn version --new-version $(npm view . version)-$(date +"%Y.%m.%d-%H.%M.%S") --no-git-tag-version
       - name: Publish version
