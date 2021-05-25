@@ -1,0 +1,23 @@
+name: Publish Stable version
+
+on:
+  release: created
+
+jobs:
+ publish-stable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn build
+      
+      - name: Publish version
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
