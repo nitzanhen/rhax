@@ -33,7 +33,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Determine next version tag
         id: get-next-version
-        uses: rhaxjs/npm-next-version@v1.0.1
+        uses: rhaxjs/npm-next-version@v1.0.2
         with:
           repo: rhax
       - name: Increment version
