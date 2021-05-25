@@ -32,11 +32,12 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - name: Determine next version tag
+        id: get-next-version
         uses: rhaxjs/npm-update-action@v1.0
         with:
           repo: rhax
       - name: Increment version
-        run: yarn version --new-version $(npm view . version)-$(date +"%Y.%m.%d-%H.%M.%S") --no-git-tag-version
+        run: yarn version --new-version ${{ steps.get-next-version.outputs.next-version }} --no-git-tag-version
       - name: Publish version
         run: yarn publish --tag unstable
         env:
