@@ -6,7 +6,7 @@ import { RhaxBase } from './RhaxBase';
 
 
 export interface RhaxArray<E> extends RhaxBase<E[]> { }
-export abstract class RhaxArray<E> {
+export class RhaxArray<E> {
   groupBy<T extends string | number | symbol>(tagger: (element: E, index: number, array: E[]) => T) {
     return rhax(groupBy(tagger, this.value));
   }
