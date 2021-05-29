@@ -6,6 +6,6 @@ export const indexBy = <E, T extends string | number | symbol>(indexer: (element
       const key = indexer(element, index, array);
       return { ...record, [key]: element };
     },
-    {} as Record<T, E>,
+    {} as Partial<Record<T, E>>,
     array
   );
