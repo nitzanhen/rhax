@@ -87,4 +87,6 @@ describe('Rhax', () => {
       }
     }
   });
+
+  /** @todo similar methods for RhaxArray */
 });
