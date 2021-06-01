@@ -1,5 +1,5 @@
 # Rhax
-[![license](https://img.shields.io/github/license/NitzanHen/rhax?color=blue)](https://choosealicense.com/licenses/mit/)
+[![license](https://img.shields.io/github/license/rhaxjs/rhax?color=blue)](https://choosealicense.com/licenses/mit/)
 [![npm](https://img.shields.io/npm/v/rhax?logo=npm&color=CB3837)](https://www.npmjs.com/package/rhax)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/rhax?color=green)](https://bundlephobia.com/result?p=rhax)
 [![codecov](https://codecov.io/gh/rhaxjs/rhax/branch/main/graph/badge.svg?token=2nQUFAqZ24)](https://codecov.io/gh/rhaxjs/rhax)
