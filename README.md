@@ -112,9 +112,34 @@ a *type-specific class* exists for each data type that has special functionality
 
 > Avoid using any of the type-specific classes' constructors directly. They're not intended to be called directly, and may result in unintended behavior. In constrast, the `Rhax` constructor itself _is_ safe. 
 
+In the API below, the value contained in a given Rhax instance is denoted `value`.
+
 ### RhaxCommon
+
+#### **map**
+`RhaxCommon<T>.map<S>(fn: (value: T) => S): Rhax<S>`
+
+Transforms the value - this function passes `value` to `fn`, and returns a Rhax instance of the result. 
+
+Exmaple:
+```typescript
+  const result = take(3).map(x => x * 2).value
+  expect(result).toBe(6);
+```
+
+#### **also**
+`RhaxCommon<T>.also(fn: (value: T) => void): Rhax<T>`
+
+#### **default**
+`RhaxCommon<T>.default<S>(fallback: S): Rhax<NonNullable<T> | S>`
+
+#### **cast**
+`RhaxCommon<T>.cast<C>(): Rhax<C>`
+
+
 ### RhaxNumber
 ### RhaxObject
+### RhaxArray
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
