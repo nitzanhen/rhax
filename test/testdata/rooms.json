@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "4tvb3afpchs0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "101",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "3jrlsgmpdcc0",
+    "status": "in_cleaning",
+    "floor": 1,
+    "number": "102",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "43rzx4lt2160",
+    "status": "occupied",
+    "floor": 1,
+    "number": "103",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "dl6u19uwbao",
+    "status": "occupied",
+    "floor": 1,
+    "number": "104",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "6snlnzgfjnc0",
+    "status": "in_cleaning",
+    "floor": 1,
+    "number": "105",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "379vxkzfvns0",
+    "status": "faulty",
+    "floor": 1,
+    "number": "106",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "w18vghhkwbk",
+    "status": "occupied",
+    "floor": 1,
+    "number": "107",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "3p3jpfpfta00",
+    "status": "occupied",
+    "floor": 1,
+    "number": "108",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "5wdvw9qfers0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "109",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "4hqisnu6skk0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "110",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "1gcjp09nizds",
+    "status": "occupied",
+    "floor": 1,
+    "number": "111",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "320bbyd6rso0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "112",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "5vlqvoc09n00",
+    "status": "occupied",
+    "floor": 1,
+    "number": "113",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "101wm10ghq4g",
+    "status": "occupied",
+    "floor": 1,
+    "number": "114",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "6tpny3f0q5c0",
+    "status": "faulty",
+    "floor": 1,
+    "number": "115",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "38tkxvhzg160",
+    "status": "occupied",
+    "floor": 1,
+    "number": "116",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "6iujmo47myw0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "117",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "7gsoh1lhiqk0",
+    "status": "in_cleaning",
+    "floor": 1,
+    "number": "118",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "7f3mjf2hmck0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "119",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "4st68kq3jam0",
+    "status": "faulty",
+    "floor": 1,
+    "number": "120",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "4euquxqdp0u0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "121",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "1gflmwsojlvk",
+    "status": "occupied",
+    "floor": 1,
+    "number": "122",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "2reudrmnksw0",
+    "status": "occupied",
+    "floor": 1,
+    "number": "123",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "1063mjnw7vtc",
+    "status": "occupied",
+    "floor": 2,
+    "number": "201",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "57zhmzl6u740",
+    "status": "faulty",
+    "floor": 2,
+    "number": "202",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "1kbov6uqxjmo",
+    "status": "vacant",
+    "floor": 2,
+    "number": "203",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "5s5nws0iwaw0",
+    "status": "vacant",
+    "floor": 2,
+    "number": "204",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "420r79irnsy0",
+    "status": "vacant",
+    "floor": 2,
+    "number": "205",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "3wkhiect8cq0",
+    "status": "vacant",
+    "floor": 2,
+    "number": "206",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6smpt5tmgc00",
+    "status": "in_cleaning",
+    "floor": 2,
+    "number": "207",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "y9m3tqlxmts",
+    "status": "occupied",
+    "floor": 2,
+    "number": "208",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "5orq89f03ug0",
+    "status": "occupied",
+    "floor": 2,
+    "number": "209",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "50lh9b6f9zw0",
+    "status": "vacant",
+    "floor": 2,
+    "number": "210",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3vm4gkfm91i0",
+    "status": "occupied",
+    "floor": 2,
+    "number": "211",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "hny7w7m5u9c",
+    "status": "occupied",
+    "floor": 2,
+    "number": "212",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "2ezczaevl0lc",
+    "status": "occupied",
+    "floor": 2,
+    "number": "213",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "2lgztezbd5g0",
+    "status": "in_cleaning",
+    "floor": 2,
+    "number": "214",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "tmjfo933ftc",
+    "status": "vacant",
+    "floor": 2,
+    "number": "215",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "pn8oipwha80",
+    "status": "faulty",
+    "floor": 2,
+    "number": "216",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3w6r3p7bw20",
+    "status": "vacant",
+    "floor": 2,
+    "number": "217",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6gvief56om40",
+    "status": "faulty",
+    "floor": 2,
+    "number": "218",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "6txj09gmmc80",
+    "status": "faulty",
+    "floor": 2,
+    "number": "219",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "427mlohq6ry0",
+    "status": "faulty",
+    "floor": 2,
+    "number": "220",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "4d6jsbwdm7q0",
+    "status": "occupied",
+    "floor": 2,
+    "number": "221",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "749e9adtaxc0",
+    "status": "occupied",
+    "floor": 2,
+    "number": "222",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "4n78c1owvn60",
+    "status": "occupied",
+    "floor": 2,
+    "number": "223",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "3mc0bgpmb540",
+    "status": "vacant",
+    "floor": 2,
+    "number": "224",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6liefg9ihu00",
+    "status": "occupied",
+    "floor": 2,
+    "number": "225",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "610v7ks78t00",
+    "status": "faulty",
+    "floor": 3,
+    "number": "301",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "3dl85s7s92u0",
+    "status": "faulty",
+    "floor": 3,
+    "number": "302",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "45vx1v0hlsm0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "303",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "6oi32x0mt680",
+    "status": "vacant",
+    "floor": 3,
+    "number": "304",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "6os258ooo8c0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "305",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "2kx51zqdecg0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "306",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "5sw5z5c7rgw0",
+    "status": "in_cleaning",
+    "floor": 3,
+    "number": "307",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6wt9216xz3o0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "308",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "364wy2ziza80",
+    "status": "occupied",
+    "floor": 3,
+    "number": "309",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "639xav4n8v00",
+    "status": "occupied",
+    "floor": 3,
+    "number": "310",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "542it42yvus0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "311",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "3rx7c11pp7y0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "312",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "2p52pa72eqw0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "313",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "lqijwmzwe9s",
+    "status": "faulty",
+    "floor": 3,
+    "number": "314",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "42ehh33a3ye0",
+    "status": "faulty",
+    "floor": 3,
+    "number": "315",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "46vkiu918so0",
+    "status": "vacant",
+    "floor": 3,
+    "number": "316",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "6a4olqd2kk40",
+    "status": "occupied",
+    "floor": 3,
+    "number": "317",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "1w3gtbpxsun4",
+    "status": "vacant",
+    "floor": 3,
+    "number": "318",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "5q03o4owzd80",
+    "status": "occupied",
+    "floor": 3,
+    "number": "319",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "2bh8rk6rdge8",
+    "status": "in_cleaning",
+    "floor": 3,
+    "number": "320",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "6pznh5prfzg0",
+    "status": "in_cleaning",
+    "floor": 3,
+    "number": "321",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "5s7en2pw18w0",
+    "status": "occupied",
+    "floor": 3,
+    "number": "322",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "v8bpkssxopc",
+    "status": "occupied",
+    "floor": 3,
+    "number": "323",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "41zhpbyqomg0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "401",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "14q5vn6zr3sw",
+    "status": "occupied",
+    "floor": 4,
+    "number": "402",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "5gn319hk1p40",
+    "status": "occupied",
+    "floor": 4,
+    "number": "403",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "6wjs21b7x3s0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "404",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "23s3ry0sdwf4",
+    "status": "occupied",
+    "floor": 4,
+    "number": "405",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "32095nxlai00",
+    "status": "occupied",
+    "floor": 4,
+    "number": "406",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "2n1vas5iwqc0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "407",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "6c6m7ld8go80",
+    "status": "occupied",
+    "floor": 4,
+    "number": "408",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "3560q7o94by0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "409",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "44fxhd3aky80",
+    "status": "occupied",
+    "floor": 4,
+    "number": "410",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "1klmqhbg9h28",
+    "status": "occupied",
+    "floor": 4,
+    "number": "411",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "59pe6r5nfyo0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "412",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "31aiuxb3r0u0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "413",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "5y5p59rkbec0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "414",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "ar34ceiwmv4",
+    "status": "occupied",
+    "floor": 4,
+    "number": "415",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "4j3dvybrjn60",
+    "status": "faulty",
+    "floor": 4,
+    "number": "416",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "15pp9pikiqkg",
+    "status": "in_cleaning",
+    "floor": 4,
+    "number": "417",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "obnlf5mvma8",
+    "status": "occupied",
+    "floor": 4,
+    "number": "418",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "5k3ninugytw0",
+    "status": "occupied",
+    "floor": 4,
+    "number": "419",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "m80ttl1xy8w",
+    "status": "occupied",
+    "floor": 4,
+    "number": "420",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "2pc05wz8wec0",
+    "status": "occupied",
+    "floor": 5,
+    "number": "501",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "sun11wb96fk",
+    "status": "occupied",
+    "floor": 5,
+    "number": "502",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "6rvd9gvkvuc0",
+    "status": "occupied",
+    "floor": 5,
+    "number": "503",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "5805xf8idzg0",
+    "status": "vacant",
+    "floor": 5,
+    "number": "504",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "6f0z93sui800",
+    "status": "faulty",
+    "floor": 5,
+    "number": "505",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6koucnxdxx80",
+    "status": "vacant",
+    "floor": 5,
+    "number": "506",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "25xolhj4e94w",
+    "status": "occupied",
+    "floor": 5,
+    "number": "507",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "2tcczotgaoo0",
+    "status": "occupied",
+    "floor": 5,
+    "number": "508",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "2176dr5fpzog",
+    "status": "occupied",
+    "floor": 5,
+    "number": "509",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "6152asnsezw0",
+    "status": "occupied",
+    "floor": 5,
+    "number": "510",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "1h6hvr3mhobk",
+    "status": "vacant",
+    "floor": 5,
+    "number": "511",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "m7ldn1kuy4w",
+    "status": "occupied",
+    "floor": 5,
+    "number": "512",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "1r6ujlqw4gio",
+    "status": "occupied",
+    "floor": 5,
+    "number": "513",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "5m5jotoory40",
+    "status": "occupied",
+    "floor": 5,
+    "number": "514",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "6eodbngngik0",
+    "status": "in_cleaning",
+    "floor": 5,
+    "number": "515",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3w3yu5jnu120",
+    "status": "occupied",
+    "floor": 5,
+    "number": "516",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "5s67zjdatrs0",
+    "status": "occupied",
+    "floor": 5,
+    "number": "517",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "5lo8cipnf2k0",
+    "status": "in_cleaning",
+    "floor": 5,
+    "number": "518",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3m5ugoja0mw0",
+    "status": "faulty",
+    "floor": 5,
+    "number": "519",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "41sdjfeo3n20",
+    "status": "occupied",
+    "floor": 6,
+    "number": "601",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "3epno9jryoi0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "602",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "4o6sn3h0iuq0",
+    "status": "vacant",
+    "floor": 6,
+    "number": "603",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "5ypqy8i6f6g0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "604",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "6yx6yctcpdg0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "605",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "7iusejz677o0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "606",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "3xqv58gf06m0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "607",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "4o95tgqx69i0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "608",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "4hrkwedldta0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "609",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "58w6prc3x94",
+    "status": "faulty",
+    "floor": 6,
+    "number": "610",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "igbigeft95k",
+    "status": "occupied",
+    "floor": 6,
+    "number": "611",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "6gflx5qlg680",
+    "status": "occupied",
+    "floor": 6,
+    "number": "612",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "5li95p1edbw0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "613",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "rppb4or82wg",
+    "status": "occupied",
+    "floor": 6,
+    "number": "614",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "5bqijd1g0yc0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "615",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "73wtc6sr5aw0",
+    "status": "vacant",
+    "floor": 6,
+    "number": "616",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6ch4biph0k00",
+    "status": "occupied",
+    "floor": 6,
+    "number": "617",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "3e5jjguo62m0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "618",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "32ya26r8xek0",
+    "status": "faulty",
+    "floor": 6,
+    "number": "619",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "4s6uzy3vmfi0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "620",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "58lub740v1s0",
+    "status": "occupied",
+    "floor": 6,
+    "number": "621",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "2atjcisfrk74",
+    "status": "faulty",
+    "floor": 6,
+    "number": "622",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "4e7a75kle960",
+    "status": "faulty",
+    "floor": 7,
+    "number": "701",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "4ij88mvad140",
+    "status": "in_cleaning",
+    "floor": 7,
+    "number": "702",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "77mzzo7q2kc",
+    "status": "in_cleaning",
+    "floor": 7,
+    "number": "703",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "bc9zk9i3u54",
+    "status": "in_cleaning",
+    "floor": 7,
+    "number": "704",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "6b22ccty91k0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "705",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "698hyxsu13s0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "706",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "7ga069u8bxc0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "707",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "2tu39u0iblk0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "708",
+    "numResidents": 3,
+    "numBeds": 2
+  },
+  {
+    "id": "4oaeod7wzd40",
+    "status": "occupied",
+    "floor": 7,
+    "number": "709",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "a2l1aq2z54o",
+    "status": "occupied",
+    "floor": 7,
+    "number": "710",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "4w1gf2vv2ya0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "711",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "71zns7o748g0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "712",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "2vddtghyefc0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "713",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "4n16tzebatk0",
+    "status": "in_cleaning",
+    "floor": 7,
+    "number": "714",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "uhonduk9mcg",
+    "status": "occupied",
+    "floor": 7,
+    "number": "715",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "3hlan55xln20",
+    "status": "in_cleaning",
+    "floor": 7,
+    "number": "716",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "29dppw95f5hc",
+    "status": "occupied",
+    "floor": 7,
+    "number": "717",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "4w9x9c99f4o0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "718",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "622wi61em600",
+    "status": "occupied",
+    "floor": 7,
+    "number": "719",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "1wzmnkh8jqf4",
+    "status": "in_cleaning",
+    "floor": 7,
+    "number": "720",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3eu2tmidi100",
+    "status": "occupied",
+    "floor": 7,
+    "number": "721",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "225p9askss5c",
+    "status": "occupied",
+    "floor": 7,
+    "number": "722",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "50ds4nb1n7c0",
+    "status": "occupied",
+    "floor": 7,
+    "number": "723",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "njo8kgslxpc",
+    "status": "faulty",
+    "floor": 8,
+    "number": "801",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3bwp0wu7pyk0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "802",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "2x2a1yrmgfc0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "803",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "1z3yyvpwl7ls",
+    "status": "occupied",
+    "floor": 8,
+    "number": "804",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "4okhom66zpu0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "805",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "1cf1lfnqac4g",
+    "status": "occupied",
+    "floor": 8,
+    "number": "806",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "2ya0ds1p8b60",
+    "status": "occupied",
+    "floor": 8,
+    "number": "807",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "24b0uj8388qo",
+    "status": "occupied",
+    "floor": 8,
+    "number": "808",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "2vq6s98w1zk0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "809",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "6ihsx8ds1qo0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "810",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "3wdcgm8blds0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "811",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "4bbrgk4qr6y0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "812",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "24be5z09bgzk",
+    "status": "occupied",
+    "floor": 8,
+    "number": "813",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "cnuy38rgbig",
+    "status": "faulty",
+    "floor": 8,
+    "number": "814",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "7ak5zx9r9wg0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "815",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "2d62p5ymfw4k",
+    "status": "occupied",
+    "floor": 8,
+    "number": "816",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "5hfow2mvsi00",
+    "status": "occupied",
+    "floor": 8,
+    "number": "817",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "7kqhiois3lc0",
+    "status": "faulty",
+    "floor": 8,
+    "number": "818",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "220sy6cy5d0g",
+    "status": "occupied",
+    "floor": 8,
+    "number": "819",
+    "numResidents": 2,
+    "numBeds": 3
+  },
+  {
+    "id": "2kkw880534w0",
+    "status": "in_cleaning",
+    "floor": 8,
+    "number": "820",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "pxrk5r8k6jk",
+    "status": "vacant",
+    "floor": 8,
+    "number": "821",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "65cdx1t01vc0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "822",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "5rw0ejcfogg0",
+    "status": "occupied",
+    "floor": 8,
+    "number": "823",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "3u6phn37p3w0",
+    "status": "vacant",
+    "floor": 8,
+    "number": "824",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "64zh7m22a680",
+    "status": "occupied",
+    "floor": 9,
+    "number": "901",
+    "numResidents": 1,
+    "numBeds": 2
+  },
+  {
+    "id": "44rpq9c0o880",
+    "status": "occupied",
+    "floor": 9,
+    "number": "902",
+    "numResidents": 4,
+    "numBeds": 2
+  },
+  {
+    "id": "blumxmwpvu0",
+    "status": "occupied",
+    "floor": 9,
+    "number": "903",
+    "numResidents": 1,
+    "numBeds": 3
+  },
+  {
+    "id": "hrbqsovyuuw",
+    "status": "vacant",
+    "floor": 9,
+    "number": "904",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "731n118jwew0",
+    "status": "vacant",
+    "floor": 9,
+    "number": "905",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "70al1ewv1no0",
+    "status": "occupied",
+    "floor": 9,
+    "number": "906",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "5l2wxzfp8f40",
+    "status": "in_cleaning",
+    "floor": 9,
+    "number": "907",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "3ne3cw0mxts0",
+    "status": "in_cleaning",
+    "floor": 9,
+    "number": "908",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "2jefkt0h2us0",
+    "status": "occupied",
+    "floor": 9,
+    "number": "909",
+    "numResidents": 4,
+    "numBeds": 3
+  },
+  {
+    "id": "5myirldmdcg0",
+    "status": "faulty",
+    "floor": 9,
+    "number": "910",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "3dxllrr3wew0",
+    "status": "faulty",
+    "floor": 9,
+    "number": "911",
+    "numResidents": 0,
+    "numBeds": 3
+  },
+  {
+    "id": "1gheb2kxoyo0",
+    "status": "occupied",
+    "floor": 9,
+    "number": "912",
+    "numResidents": 2,
+    "numBeds": 2
+  },
+  {
+    "id": "7dlfxj9rwm00",
+    "status": "in_cleaning",
+    "floor": 9,
+    "number": "913",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "385x8jkqobs0",
+    "status": "in_cleaning",
+    "floor": 9,
+    "number": "914",
+    "numResidents": 0,
+    "numBeds": 2
+  },
+  {
+    "id": "3zil8dfxozu0",
+    "status": "occupied",
+    "floor": 9,
+    "number": "915",
+    "numResidents": 3,
+    "numBeds": 3
+  },
+  {
+    "id": "f43uwlflhf4",
+    "status": "occupied",
+    "floor": 9,
+    "number": "916",
+    "numResidents": 2,
+    "numBeds": 3
+  }
+]
