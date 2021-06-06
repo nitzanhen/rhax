@@ -115,3 +115,5 @@ export const population = {
   'Ashdod': 224_656,
   'Petah Tikva': 200_000
 };
+
+export { default as rooms } from './rooms.json';

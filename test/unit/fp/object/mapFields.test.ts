@@ -1,11 +1,11 @@
 import { mapFields } from 'fp/object/mapFields';
 
-import * as examples from 'test-data';
+import { population, colors, contacts } from 'test-data';
 
 describe('fp/object/mapFields', () => {
 
   test('With any predicate, the keys of the output match the keys of the input', () => {
-    for (const example of Object.values(examples)) {
+    for (const example of [population, colors, contacts]) {
       const mapped = mapFields(() => Math.random(), example);
       const exampleKeys = new Set(Object.keys(example));
       const mappedKeys = new Set(Object.keys(mapped));
@@ -14,7 +14,7 @@ describe('fp/object/mapFields', () => {
   });
 
   test('A constant predicate returns an array of constants', () => {
-    for (const example of Object.values(examples)) {
+    for (const example of [population, colors, contacts]) {
       const mapped = mapFields(() => 1, example);
       const allOnes = Object.values(mapped).every(v => v === 1);
       expect(allOnes).toBe(true);
@@ -22,7 +22,7 @@ describe('fp/object/mapFields', () => {
   });
 
   test('Example - extracting fields out of objects', () => {
-    expect(mapFields(({ name }) => name, examples.colors)).toEqual({
+    expect(mapFields(({ name }) => name, colors)).toEqual({
       '58e0b450-a676-4be8-b257-4dab3febd6e1': 'Cerulean',
       'c5c03c48-5f7b-4846-82f5-b436a3c3431d': 'Citron',
       'c13e71fc-69dd-4d41-a7fc-35e54cc6ba8f': 'Russian violet',
@@ -30,7 +30,7 @@ describe('fp/object/mapFields', () => {
       'ce1bf997-9fb2-4a80-9ab7-2ee63f30cc07': 'Persian green'
     });
 
-    expect(mapFields(({ company, occupation }) => ({ company, occupation }), examples.contacts)).toEqual({
+    expect(mapFields(({ company, occupation }) => ({ company, occupation }), contacts)).toEqual({
       'c114ca96-3363-4b77-b9d7-2d2bcd35ed8d': {
         company: 'Opticomp',
         occupation: 'Commentator'
@@ -59,7 +59,7 @@ describe('fp/object/mapFields', () => {
   });
 
   test('Example - wrapping values in functions and calling them', () => {
-    for (const example of Object.values(examples)) {
+    for (const example of [population, colors, contacts]) {
       const callbacks = mapFields(v => () => v, example as Record<string, unknown>);
       const calledCallbacks = mapFields(cb => cb(), callbacks);
       expect(calledCallbacks).toEqual(example);
@@ -67,7 +67,7 @@ describe('fp/object/mapFields', () => {
   });
 
   test('Example - casting all fields into strings', () => {
-    for (const example of Object.values(examples)) {
+    for (const example of [population, colors, contacts]) {
       const cast = mapFields(String, example);
       expect(Object.values(cast).every(s => typeof s === 'string')).toBe(true);
     }
