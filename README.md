@@ -295,6 +295,27 @@ expect(oddNotA).toBe('c');
 #### **groupBy**
 `RhaxObject<O>.groupBy<T extends string | number | symbol>(tagger: (value: ValueOf<O>, key: keyof O, record: O) => T): Rhax<Record<T, ValueOf<O>[]>>`
 
+Collects the fields of `value` into a set of lists, each field placed based on the value `tagger` returns for it.
+
+Example: 
+```typescript
+const requests = {
+  '#111': { status: 'pending', origin: 'foo' },
+  '#123': { status: 'in_progress', origin: 'bar' },
+  '#140': { status: 'completed', origin: 'foo' },
+  '#140': { status: 'completed', origin: 'baz' },
+};
+const modulos3 = take(requests).groupBy(req => req.status)();
+expect(counts).toEqual({
+  'pending': [{ status: 'pending', origin: 'foo' }],
+  'in_progress': [{ status: 'in_progress', origin: 'bar' }],
+  'completed': [
+    { status: 'completed', origin: 'foo' }, 
+    { status: 'completed', origin: 'baz' }
+  ]
+})
+```
+
 #### **pick**
 `RhaxObject<O>.pick<K extends keyof O>(keys: K[]): Rhax<Pick<O, K>>`
 
@@ -334,11 +355,30 @@ This is essentially a wrapper around [Array.prototype.reduce()](https://develope
 `indexBy` turns an array into an object, with the key determined by the passed `indexer`.
 
 Example: 
-
+```typescript
+const people = [{ id: '#1', foo: 'bar' }, { id: '#2', foo: 'baz' }];
+const peopleById = take(people).indexBy(p => p.id)();
+expect(peopleById).toEquak({
+  '#1': 'bar',
+  '#2': 'baz'
+});
+```
 
 #### **groupBy**
 `RhaxArray<E>.groupBy<T extends string | number | symbol>(tagger: (element: E, index: number, array: E[]) => T): Rhax<Record<T, E[]>>`
 
+Collects the elements of `value` into a set of lists, each field placed based on the value `tagger` returns for it.
+
+Example: 
+```typescript
+const integers = [0, 1, 2, 3, 4, 5, 6, 7];
+const modulo3 = take(integers).groupBy(n => n % 3)();
+expect(modulo3).toEqual({
+  0: [0, 3, 6],
+  1: [1, 4, 7],
+  2: [2, 5]
+})
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
