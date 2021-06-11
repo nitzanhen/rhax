@@ -1,8 +1,9 @@
 # Rhax
-[![license](https://img.shields.io/github/license/rhaxjs/rhax?color=blue)](https://choosealicense.com/licenses/mit/)
+[![language](https://img.shields.io/github/languages/top/rhaxjs/rhax?color=blue&logo=typescript)](https://github.com/rhaxjs/rhax/search?l=typescript)
+[![codecov](https://codecov.io/gh/rhaxjs/rhax/branch/main/graph/badge.svg?token=2nQUFAqZ24)](https://codecov.io/gh/rhaxjs/rhax)
 [![npm](https://img.shields.io/npm/v/rhax?logo=npm&color=CB3837)](https://www.npmjs.com/package/rhax)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/rhax?color=green)](https://bundlephobia.com/result?p=rhax)
-[![codecov](https://codecov.io/gh/rhaxjs/rhax/branch/main/graph/badge.svg?token=2nQUFAqZ24)](https://codecov.io/gh/rhaxjs/rhax)
+[![license](https://img.shields.io/github/license/rhaxjs/rhax?color=yellow)](https://choosealicense.com/licenses/mit/)
 
 Rhax (ῥάξ - Ancient Greek for "grape") is a Typescript-first library for simple and elegant data transformations.<br/>
 It was created with the "casual" Typescript functional programmer in mind, and aims to provide the advantages of functional programming, without requiring the programmer to surrender the entire codebase to the paradigm's constraints, restrictive methods, and ocean of jargon.
