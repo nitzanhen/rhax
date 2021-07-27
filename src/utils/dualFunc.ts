@@ -1,5 +1,5 @@
-import { curryLast } from "./curryLast";
-import { Func, NoTail, Tail } from "./types";
+import { curryLast } from './curryLast';
+import { Func, NoTail, Tail } from './types';
 
 export interface DualFunc<A extends any[], B> {
     (...args: A): B;
@@ -15,10 +15,11 @@ export function dualFunc<A extends any[], B>(
     // to preserve its name, then return that function.
     const returns = {
         [fn.name]: function (...args: [...NoTail<A>, Tail<A>?]) {
-            const tailFn = curried(...(args as any))
+            const tailFn = curried(...(args as any));
             return arguments.length >= fn.length
+                // eslint-disable-next-line prefer-rest-params
                 ? (tailFn as any)(arguments[fn.length])
-                : tailFn
+                : tailFn;
         } as unknown as DualFunc<A, B>
     };
 

@@ -1,4 +1,4 @@
-import { Func, NoTail, Tail } from "./types";
+import { Func, NoTail, Tail } from './types';
 
 type CurryTail<A extends any[], B> = Func<NoTail<A>, Func<Tail<A>, B>>;
 
