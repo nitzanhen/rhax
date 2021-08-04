@@ -1,11 +1,21 @@
-import { reduce } from './reduce';
+import { IdentifierOf, RecordOrArray } from '../../utils/types';
 
-export const omit = <O, K extends keyof O>(keys: K[], record: O): Omit<O, K> => {
-  const keySet = new Set<keyof O>(keys);
+import { filter } from './filter';
 
-  return reduce((acc, v, k) =>
-    keySet.has(k) ? acc : ({ ...acc, [k]: v }),
-    {} as Omit<O, K>,
-    record
-  );
-};
+export function omit<E>(indices: number[], array: E[]): E[];
+export function omit<O, K extends keyof O>(keys: K[], record: O): Omit<O, K>;
+
+export function omit<C extends RecordOrArray, I extends IdentifierOf<C>>(
+  identifiers: I[]
+): C extends (infer E)[] ? (array: E[]) => E[] : (record: C) => Omit<C, I>
+
+
+export function omit<C extends RecordOrArray, I extends IdentifierOf<C>>(identifiers: I[], collection?: C) {
+  if (arguments.length < 2) {
+    return (collection: C) => omit(identifiers as any, collection);
+  }
+
+  const idSet = new Set<IdentifierOf<C>>(identifiers);
+
+  return filter((_, k) => !idSet.has(k as IdentifierOf<C>), collection);
+}

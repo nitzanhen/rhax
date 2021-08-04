@@ -1,6 +1,7 @@
 export type ValueOf<T> = T[keyof T];
 export type ElementOf<A> = A extends (infer E)[] ? E : never 
 export type ItemOf<T extends RecordOrArray> = T extends any[] ? ElementOf<T> : ValueOf<T>
+export type IdentifierOf<T extends RecordOrArray> = T extends any[] ? number : keyof T;
 
 export type EmptyObj = Record<string, never>;
 

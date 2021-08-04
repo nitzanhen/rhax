@@ -1,4 +1,4 @@
-import { filter, mapFields, reduce, find, findKey, groupBy } from './fp/object';
+import { filter, map, reduce, find, findKey, groupBy } from './fp/object';
 import { omit } from './fp/object/omit';
 import { pick } from './fp/object/pick';
 
@@ -10,7 +10,7 @@ export interface RhaxObject<O> extends RhaxBase<O> { }
 export class RhaxObject<O> {
 
   mapFields<W>(fn: (value: ValueOf<O>, key: keyof O, record: O) => W) {
-    return rhax(mapFields(fn, this.value));
+    return rhax(map(fn, this.value));
   }
 
   filter(predicate: (value: ValueOf<O>, key: keyof O, record: O) => boolean) {

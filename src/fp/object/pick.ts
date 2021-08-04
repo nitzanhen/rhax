@@ -1,12 +1,22 @@
-import { reduce } from './reduce';
+import { IdentifierOf, RecordOrArray } from '../../utils/types';
 
-export const pick = <O, K extends keyof O>(keys: K[], record: O): Pick<O, K> => {
-  const keySet = new Set<keyof O>(keys);
+import { filter } from './filter';
 
-  return reduce((acc, v, k) =>
-    keySet.has(k) ? ({ ...acc, [k]: v }) : acc,
-    {} as Pick<O, K>,
-    record
-  );
-};
+export function pick<E>(indices: number[], array: E[]): E[];
+export function pick<O, K extends keyof O>(keys: K[], record: O): Pick<O, K>;
+
+export function pick<C extends RecordOrArray, I extends IdentifierOf<C>>(
+  identifiers: I[]
+): C extends (infer E)[] ? (array: E[]) => E[] : (record: C) => Pick<C, I & keyof C>
+
+
+export function pick<C extends RecordOrArray, I extends IdentifierOf<C>>(identifiers: I[], collection?: C) {
+  if(arguments.length < 2) {
+    return (collection: C) => pick(identifiers as any, collection);
+  }
+
+  const idSet = new Set<IdentifierOf<C>>(identifiers);
+
+  return filter((_, k) => !idSet.has(k as IdentifierOf<C>), collection);
+}
 

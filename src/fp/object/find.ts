@@ -7,7 +7,15 @@ export type Query<C extends RecordOrArray> = C extends (infer E)[] ? ArrayQuery<
 export function find<C extends RecordOrArray>(query: Query<C>, collection: C): ItemOf<C>
 export function find<C extends RecordOrArray>(query: Query<C>): (collection: C) => ItemOf<C>;
 
-export function find<O>(query: , record: O) {
-  return (Object.entries(record) as [keyof O, ValueOf<O>][])
-    .find(([k, v]) => query(v, k, record))?.[1];
+export function find<C extends RecordOrArray>(query: Query<C>, collection?: C) {
+  if (collection === undefined) {
+    return (collection: C) => find(query, collection);
+  }
+
+  if (Array.isArray(collection)) {
+    return collection.find((element, index) => (query as ArrayQuery<C>)(element, index));
+  }
+
+  return (Object.entries(collection) as [keyof C, ValueOf<C>][])
+    .find(([k, v]) => (query as RecordQuery<C>)(v, k))?.[1];
 }
