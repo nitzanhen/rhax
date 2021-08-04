@@ -1,9 +1,10 @@
-import { reduce } from './reduce';
+import { ObjectKey } from '../../utils/types';
+import { reduce } from '../object/reduce';
 
-export const indexBy = <E, T extends string | number | symbol>(indexer: (element: E, index: number, array: E[]) => T, array: E[]) =>
+export const indexBy = <E, T extends ObjectKey>(indexer: (element: E, index: number) => T, array: E[]) =>
   reduce(
     (record, element, index) => {
-      const key = indexer(element, index, array);
+      const key = indexer(element, index);
       return { ...record, [key]: element };
     },
     {} as Record<T, E>,
