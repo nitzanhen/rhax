@@ -9,7 +9,7 @@ import * as testdata from 'test-data';
 describe('RhaxObject', () => {
   test('mapFields', () => {
     expect(
-      take(testdata.colors).mapFields(({ name }) => name)()
+      take(testdata.colors).map(({ name }) => name)()
     ).toEqual({
       '58e0b450-a676-4be8-b257-4dab3febd6e1': 'Cerulean',
       'c5c03c48-5f7b-4846-82f5-b436a3c3431d': 'Citron',
@@ -81,7 +81,7 @@ describe('RhaxObject', () => {
 
   test('groupBy', () => {
     const byZodiac = take(testdata.contacts)
-      .mapFields(({ name, zodiac }) => ({ name, zodiac }))
+      .map(({ name, zodiac }) => ({ name, zodiac }))
       .groupBy(({ zodiac }) => zodiac)
       ();
 

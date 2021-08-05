@@ -1,7 +1,8 @@
-import { groupBy, mapFields } from 'fp/object';
+import { groupBy, map } from 'funcs';
+
 import * as examples from 'test-data';
 
-describe('fp/object/groupBy', () => {
+describe('funcs/groupBy', () => {
   test('Constant tagger takes all elements to single field', () => {
     for (const data of Object.entries(examples)) {
       const values = Object.values(data);
@@ -22,7 +23,7 @@ describe('fp/object/groupBy', () => {
 
   test('Example - tagging contacts by zodiac', () => {
     //Keep only the names for brevity
-    const trimmedContacts = mapFields(({ name, zodiac }) => ({ name, zodiac }), examples.contacts);
+    const trimmedContacts = map(({ name, zodiac }) => ({ name, zodiac }), examples.contacts);
     const byZodiac = groupBy((contact) => contact.zodiac, trimmedContacts);
 
     expect(byZodiac).toEqual({
@@ -36,7 +37,7 @@ describe('fp/object/groupBy', () => {
   test('Example - tagging contacts by domain', () => {
     const getDomain = (email: string) => email.slice(email.lastIndexOf('.') + 1);
 
-    const trimmedContacts = mapFields(({ name, email }) => ({ name, email }), examples.contacts);
+    const trimmedContacts = map(({ name, email }) => ({ name, email }), examples.contacts);
     const byDomain = groupBy(contact => getDomain(contact.email), trimmedContacts);
     expect(byDomain).toEqual({
       'com': [{

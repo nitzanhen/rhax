@@ -1,8 +1,8 @@
-import { reduce } from 'fp/array/reduce';
+import { reduce } from 'funcs';
 
 import * as examples from 'test-data';
 
-describe('fp/array/reduce', () => {
+describe('funcs/reduce', () => {
   test('Empty array is reduced to initial value with any reducer', () => {
     expect(reduce((acc, v) => `${acc}${v}`, '', [])).toEqual('');
     expect(reduce((acc) => acc + 1, 0, [])).toEqual(0);

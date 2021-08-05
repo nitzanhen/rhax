@@ -1,9 +1,9 @@
-import { filter } from 'fp/object/filter';
+import { filter } from 'funcs';
 
 import * as examples from 'test-data';
 
 
-describe('fp/object/filter', () => {
+describe('funcs/filter', () => {
   test('Constant false returns an empty object', () => {
     expect(filter(() => false, examples.basic)).toEqual({});
     expect(filter(() => false, examples.lotsOfFields)).toEqual({});
@@ -71,20 +71,6 @@ describe('fp/object/filter', () => {
     expect(filter(v => v.highlighted, examples.colors)).toEqual({
       '58e0b450-a676-4be8-b257-4dab3febd6e1': { name: 'Cerulean', hex: '#007BA7', highlighted: true },
       'c13e71fc-69dd-4d41-a7fc-35e54cc6ba8f': { name: 'Russian violet', hex: '#32174D', highlighted: true },
-    });
-  });
-
-  test('Example - Using `record` argument to extract fields dynamically', () => {
-    //Extract only keys whose pairs (values) are also keys in the record:
-    expect(filter((v, _, pairs) => v in pairs, examples.pairs)).toEqual({
-      'yin': 'yang',
-      'water boy': 'fire girl',
-      'tom': 'jerry',
-      'red': 'blue',
-      'fire girl': 'water boy',
-      'jerry': 'tom',
-      'yang': 'yin',
-      'blue': 'red',
     });
   });
 });

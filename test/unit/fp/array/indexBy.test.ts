@@ -1,4 +1,4 @@
-import { indexBy } from 'fp/array/indexBy';
+import { indexBy } from 'funcs';
 import { contacts as contactsRecord, } from 'test-data';
 
 const contacts = Object.values(contactsRecord);
@@ -10,7 +10,7 @@ const colors = [
   { name: 'Persian green', hex: '#00A693', highlighted: false }
 ];
 
-describe('fp/array/indexBy', () => {
+describe('funcs/indexBy', () => {
 
   test('Empty array gives empty object with any indexer', () => {
     expect(indexBy((el) => el, [])).toEqual({});

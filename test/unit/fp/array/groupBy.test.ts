@@ -1,7 +1,6 @@
-import { groupBy } from 'fp/array/groupBy';
-import { mapFields } from 'fp/object';
+import { groupBy, map } from 'funcs';
 
-describe('fp/array/groupBy', () => {
+describe('funcs/groupBy', () => {
   const zodiacs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpius', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
   const months = [
     { name: 'January', days: 31 },
@@ -46,7 +45,7 @@ describe('fp/array/groupBy', () => {
 
   test('Example - tagging months by number of days', () => {
     const groupedMonths = groupBy((month) => month.days, months);
-    const groupedNames = mapFields(group => group.map(month => month.name), groupedMonths);
+    const groupedNames = map(group => group.map(month => month.name), groupedMonths);
     expect(groupedNames).toEqual({
       28: ['February'],
       30: ['April', 'June', 'September', 'November'],

@@ -5,8 +5,14 @@
  * @param max the upper bound of the range.
  * @param x the number to clamp.
  */
-export const clamp = (min: number, max: number, x: number) => {
+export function clamp(min: number, max: number): (x: number) => number;
+export function clamp(min: number, max: number, x: number): number;
+export function clamp(min: number, max: number, x?: number) {
+  if (x === undefined) {
+    return (x: number) => clamp(min, max, x);
+  }
+
   if (x < min) return min;
   else if (max < x) return max;
   else return x;
-};
+}

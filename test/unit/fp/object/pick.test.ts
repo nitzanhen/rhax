@@ -1,8 +1,8 @@
-import { pick } from 'fp/object/pick';
+import { pick } from 'funcs';
 
 import * as testdata from 'test-data';
 
-describe('fp/object/pick', () => {
+describe('funcs/pick', () => {
   test('pick with empty array gives an empty object', () => {
     expect(pick([], testdata.basic)).toEqual({});
     expect(pick([], testdata.colors)).toEqual({});
