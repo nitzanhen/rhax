@@ -1,5 +1,6 @@
-import { clamp } from './fp/number';
 
+
+import { clamp } from './funcs';
 import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
 

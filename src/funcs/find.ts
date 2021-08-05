@@ -1,15 +1,17 @@
-import { ItemOf, RecordOrArray, ValueOf } from '../../utils/types';
+import { ElementOf, ItemOf, RecordOrArray, ValueOf } from '../utils/types';
+
 
 export type RecordQuery<O> = (value: ValueOf<O>, key: keyof O) => boolean;
 export type ArrayQuery<E> = (element: E, index: number) => boolean;
 export type Query<C extends RecordOrArray> = C extends (infer E)[] ? ArrayQuery<E> : RecordQuery<C>;
 
-export function find<C extends RecordOrArray>(query: Query<C>, collection: C): ItemOf<C>
+export function find<E>(query: ArrayQuery<E>, array: E[]): ElementOf<E>;
+export function find<O extends Record<string, unknown>>(query: RecordQuery<O>, collection: O): ValueOf<O>;
 export function find<C extends RecordOrArray>(query: Query<C>): (collection: C) => ItemOf<C>;
 
 export function find<C extends RecordOrArray>(query: Query<C>, collection?: C) {
   if (collection === undefined) {
-    return (collection: C) => find(query, collection);
+    return (collection: C) => find(query as any, collection as any);
   }
 
   if (Array.isArray(collection)) {

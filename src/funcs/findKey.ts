@@ -1,13 +1,14 @@
-import { RecordOrArray, ValueOf } from '../../utils/types';
+import { RecordOrArray, ValueOf } from '../utils/types';
 
 import { ArrayQuery, Query, RecordQuery } from './find';
 
-export function findKey<C extends RecordOrArray>(query: Query<C>, collection: C): number
+export function findKey<E>(query: ArrayQuery<E>, array: E[]): number;
+export function findKey<O extends Record<string, unknown>>(query: RecordQuery<O>, record: O): number;
 export function findKey<C extends RecordOrArray>(query: Query<C>): (collection: C) => number;
 
 export function findKey<C extends RecordOrArray>(query: Query<C>, collection?: C) {
   if (collection === undefined) {
-    return (collection: C) => findKey(query, collection);
+    return (collection: C) => findKey(query as any, collection as any);
   }
 
   if (Array.isArray(collection)) {

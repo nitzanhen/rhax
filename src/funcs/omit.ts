@@ -1,4 +1,4 @@
-import { IdentifierOf, RecordOrArray } from '../../utils/types';
+import { IdentifierOf, RecordOrArray } from '../utils/types';
 
 import { filter } from './filter';
 

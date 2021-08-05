@@ -1,4 +1,4 @@
-import { RecordOrArray, ValueOf } from '../../utils/types';
+import { RecordOrArray, ValueOf } from '../utils/types';
 
 export type RecordPredicate<O> = (value: ValueOf<O>, key: keyof O) => boolean;
 export type ArrayPredicate<E> = (element: E, index: number) => boolean;
@@ -16,7 +16,7 @@ export function filter<O>(
 
 export function filter<C extends RecordOrArray>(
   predicate: Predicate<C>
-): C extends (infer E)[] ? (array: E[]) => E[] : (record: C) => Partial<C>
+): C extends (infer E)[] ? (array: E[]) => E[] : (record: C) => Partial<C>;
 
 export function filter<O, E>(
   predicate: RecordPredicate<O> | ArrayPredicate<E>,
