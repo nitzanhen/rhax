@@ -38,7 +38,7 @@ describe('RhaxArray', () => {
     expect(
       take(months)
         .groupBy(month => month.days)
-        .mapFields(group => group.map(month => month.name))
+        .map(group => group.map(month => month.name))
         ()
     ).toEqual({
       28: ['February'],
@@ -83,7 +83,7 @@ describe('RhaxArray', () => {
     expect(
       take(months)
         .indexBy(month => month.name)
-        .mapFields(month => month.days)
+        .map(month => month.days)
         ()
     ).toEqual({
       January: 31,

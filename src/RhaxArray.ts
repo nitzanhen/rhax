@@ -1,22 +1,22 @@
-import { groupBy } from './fp/array/groupBy';
-import { indexBy } from './fp/array/indexBy';
-import { reduce } from './fp/array/reduce';
+
+import { groupBy, reduce, indexBy, ArrayReducer, ArrayTagger, ArrayIndexer } from './funcs';
 
 import { rhax } from './Rhax';
 import { RhaxBase } from './RhaxBase';
+import { ObjectKey } from './utils/types';
 
 
 export interface RhaxArray<E> extends RhaxBase<E[]> { }
 export class RhaxArray<E> {
-  reduce<A>(reducer: (acc: A, element: E, index: number, array: E[]) => A, initialValue: A) {
+  reduce<A>(reducer: ArrayReducer<E, A>, initialValue: A) {
     return rhax(reduce(reducer, initialValue, this.value));
   }
 
-  groupBy<T extends string | number | symbol>(tagger: (element: E, index: number, array: E[]) => T) {
+  groupBy<T extends ObjectKey>(tagger: ArrayTagger<E, T>) {
     return rhax(groupBy(tagger, this.value));
   }
 
-  indexBy<T extends string | number | symbol>(indexer: (element: E, index: number, array: E[]) => T) {
+  indexBy<T extends ObjectKey>(indexer: ArrayIndexer<E, T>) {
     return rhax(indexBy(indexer, this.value));
   }
 }

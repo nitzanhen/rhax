@@ -1,8 +1,8 @@
-import { find } from 'fp/object';
+import { find } from 'funcs';
 
 import * as examples from 'test-data';
 
-describe('fp/object/find', () => {
+describe('funcs/find', () => {
   test('Constant false returns undefined', () => {
     expect(find(() => false, examples.basic)).toBe(undefined);
     expect(find(() => false, examples.lotsOfFields)).toBe(undefined);
@@ -44,9 +44,5 @@ describe('fp/object/find', () => {
   test('Exmaple - Finding a key containing a space character', () => {
     expect(find((_, k) => k.includes(' '), examples.pairs)).toBeTruthy();
     expect(find((_, k) => k.includes('  '), examples.pairs)).toBe(undefined);
-  });
-
-  test('Example - Using record parameter to find a field that doesnt have a pair', () => {
-    expect(find((v, _, record) => !(v in record), examples.pairs)).toBeTruthy();
   });
 });

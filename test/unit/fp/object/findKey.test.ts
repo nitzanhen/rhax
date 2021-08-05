@@ -1,8 +1,8 @@
-import { findKey } from 'fp/object';
+import { findKey } from 'funcs';
 
 import * as examples from 'test-data';
 
-describe('fp/object/findKey', () => {
+describe('funcs/findKey', () => {
   test('Constant false returns undefined', () => {
     expect(findKey(() => false, examples.basic)).toBe(undefined);
     expect(findKey(() => false, examples.lotsOfFields)).toBe(undefined);
@@ -44,9 +44,5 @@ describe('fp/object/findKey', () => {
   test('Exmaple - Finding a key containing a space character', () => {
     expect(findKey((_, k) => k.includes(' '), examples.pairs)).toBeTruthy();
     expect(findKey((_, k) => k.includes('  '), examples.pairs)).toBe(undefined);
-  });
-
-  test('Example - Using record parameter to find a field that doesnt have a pair', () => {
-    expect(findKey((v, _, record) => !(v in record), examples.pairs)).toBeTruthy();
   });
 });

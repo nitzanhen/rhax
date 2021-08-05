@@ -1,6 +1,6 @@
-import { clamp } from 'fp/number/clamp';
+import { clamp } from 'funcs';
 
-describe('fp/number/clamp', () => {
+describe('funcs/clamp', () => {
   test('For x <= min, returns min', () => {
     expect(clamp(1, 3, -1)).toBe(1);
     expect(clamp(1, 3, -100)).toBe(1);
