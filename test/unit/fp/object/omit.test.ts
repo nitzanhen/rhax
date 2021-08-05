@@ -1,9 +1,8 @@
-import { omit } from 'fp/object/omit';
+import { omit } from 'funcs';
 
 import * as testdata from 'test-data';
 
-
-describe('fp/object/omit', () => {
+describe('funcs/omit', () => {
   test('omit with empty array gives an equal object', () => {
     expect(omit([], testdata.basic)).toEqual(testdata.basic);
     expect(omit([], testdata.colors)).toEqual(testdata.colors);

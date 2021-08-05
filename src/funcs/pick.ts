@@ -17,6 +17,6 @@ export function pick<C extends RecordOrArray, I extends IdentifierOf<C>>(identif
 
   const idSet = new Set<IdentifierOf<C>>(identifiers);
 
-  return filter((_, k) => !idSet.has(k as IdentifierOf<C>), collection);
+  return filter((_, k) => idSet.has(k as IdentifierOf<C>), collection);
 }
 
