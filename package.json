@@ -2,11 +2,17 @@
   "name": "rhax",
   "description": "Typescript library for simple and elegant data transformations",
   "version": "2.0.0-alpha.1",
+  "source": "src/index.ts",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "author": {
     "name": "NitzanHen",
-    "email": "nitzan.alpha@gmail.com",
+    "email": "code@nitzanhen.net",
     "url": "https://github.com/NitzanHen"
   },
   "license": "MIT",
@@ -33,6 +39,8 @@
     "dist"
   ],
   "devDependencies": {
+    "@parcel/packager-ts": "^2.2.1",
+    "@parcel/transformer-typescript-types": "^2.2.1",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.16.0",
     "@typescript-eslint/parser": "^4.16.0",
