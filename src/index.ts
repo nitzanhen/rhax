@@ -1,6 +1,7 @@
-export * from './Rhax';
-export * from './RhaxCommon';
-export * from './RhaxBase';
-export * from './funcs';
+export * from './array';
+export * from './number';
+export * from './object';
 
 export * from './utils/types';
+
+export * from './pipe';
