@@ -1,3 +1,4 @@
+import { tuple } from '../array/tuple';
 
 /**
  * Returns the item of `items` for which the *maximal* value by `toNumber` is received.
@@ -10,7 +11,7 @@
  * minItem(['a', '32f', '#ffd'], s => s.length) => '#ffd'
  */
  export const maxItem = <T>(items: T[], toNumber: (it: T) => number): T =>
- items.map(it => [it, toNumber(it)] as [T, number])
+ items.map(it => tuple(it, toNumber(it)))
    .reduce(
      (minPair, pair) => (minPair[1] > pair[1]) ? minPair : pair,
      [undefined as unknown as T, Infinity]
