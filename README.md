@@ -5,6 +5,8 @@
 [![bundle size](https://img.shields.io/bundlephobia/minzip/rhax?color=green)](https://bundlephobia.com/result?p=rhax)
 [![license](https://img.shields.io/github/license/rhaxjs/rhax?color=yellow)](https://choosealicense.com/licenses/mit/)
 
+> v2 is WIP.
+
 Rhax (ῥάξ - Ancient Greek for "grape") is a Typescript-first library for simple and elegant data transformations.<br/>
 It was created with the "casual" Typescript functional programmer in mind, and aims to provide the advantages of functional programming, without requiring the programmer to surrender the entire codebase to the paradigm's constraints, restrictive methods, and ocean of jargon.
 
