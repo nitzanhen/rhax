@@ -1,5 +1,5 @@
-import { makeArray } from './makeArray';
-import { tuple } from './tuple';
+import { makeArray } from '../core/makeArray';
+import { tuple } from './helpers';
 
 export const zip = <T, S>(arr1: T[], arr2: S[]): [T, S][] => 
   makeArray(

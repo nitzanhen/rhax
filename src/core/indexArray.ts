@@ -1,6 +1,6 @@
 import { ObjectKey } from '../utils/types';
+import { tuple } from './helpers';
 import { toObject } from './toObject';
-import { tuple } from './tuple';
 
 export type ArrayIndexer<E, T> = (element: E, index: number) => T
 

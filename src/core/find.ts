@@ -1,5 +1,5 @@
 import { EntryOf, ValueOf } from '../utils/types';
-import { entries } from '.';
+import { entries } from './helpers';
 
 export type ObjectQuery<O extends object> = (value: ValueOf<O>, key: keyof O) => boolean
 

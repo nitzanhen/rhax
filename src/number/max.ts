@@ -1,4 +1,4 @@
-import { tuple } from '../array/tuple';
+import { tuple } from '../core/helpers';
 
 /**
  * Returns the item of `items` for which the *maximal* value by `toNumber` is received.

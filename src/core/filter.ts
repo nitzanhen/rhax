@@ -1,7 +1,7 @@
-import { toObject } from '../array';
+
 import { ValueOf } from '../utils/types';
 import { entries } from './helpers';
-
+import { toObject } from './toObject';
 
 export type ArrayPredicate<E> = (el: E, index: number) => boolean;
 export type ObjectPredicate<O extends object> = (value: ValueOf<O>, key: keyof O) => boolean;

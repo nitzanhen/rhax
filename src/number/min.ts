@@ -1,4 +1,5 @@
-import { tuple } from '../array/tuple';
+import { tuple } from '../core/helpers';
+
 
 /**
  * Returns the item of `items` for which the *minimal* value by `toNumber` is received.

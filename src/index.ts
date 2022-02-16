@@ -1,6 +1,5 @@
-export * from './array';
+export * from './core';
 export * from './number';
-export * from './object';
 
 export * from './utils/types';
 

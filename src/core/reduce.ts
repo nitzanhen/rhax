@@ -1,5 +1,5 @@
 import { ValueOf } from '../utils/types';
-import { entries } from './helpers';
+import { entries } from '../core/helpers';
 
 export type ArrayReducer<E, A> = (acc: A, el: E, index: number) => A;
 export type ObjectReducer<O extends object, A> = (acc: A, value: ValueOf<O>, key: keyof O) => A;

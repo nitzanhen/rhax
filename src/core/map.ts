@@ -1,6 +1,7 @@
-import { toObject, tuple } from '../array';
+
 import { ValueOf } from '../utils/types';
-import { entries } from './helpers';
+import { entries, tuple } from '../core/helpers';
+import { toObject } from './toObject';
 
 export type ArrayMapper<E, W> = (el: E, index: number) => W;
 export type ObjectMapper<O extends object, W> = (value: ValueOf<O>, key: keyof O) => W;
