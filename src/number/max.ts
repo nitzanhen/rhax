@@ -10,21 +10,30 @@ import { tuple } from '../array/tuple';
  * @example
  * minItem(['a', '32f', '#ffd'], s => s.length) => '#ffd'
  */
- export const maxItem = <T>(items: T[], toNumber: (it: T) => number): T =>
- items.map(it => tuple(it, toNumber(it)))
-   .reduce(
-     (minPair, pair) => (minPair[1] > pair[1]) ? minPair : pair,
-     [undefined as unknown as T, Infinity]
-   )[0];
+export const maxItem = <T>(items: T[], toNumber: (it: T) => number): T =>
+  items.map(it => tuple(it, toNumber(it)))
+    .reduce(
+      (minPair, pair) => (minPair[1] > pair[1]) ? minPair : pair,
+      [undefined as unknown as T, Infinity]
+    )[0];
 
 /**
 * Returns the largest value out of the given `numbers`.
 * 
 * @example
+* min([1, 43, 2.3, 5, -2]) => 43
 * min(1, 43, 2.3, 5, -2) => 43
 */
-export const max = (...numbers: number[]): number =>
- numbers.reduce(
-   (m, x) => Math.max(m, x),
-   Infinity
- );
+export function max(...numbers: number[]): number;
+export function max(numbers: number[]): number;
+export function max(...args: any[]): number {
+  if (args.length > 1 || !Array.isArray(args[0])) {
+    return max(args);
+  }
+
+  const [numbers] = args;
+  return numbers.reduce(
+    (m, x) => Math.max(m, x),
+    Infinity
+  );
+}

@@ -65,7 +65,8 @@
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "no-unexpected-multiline": "off"
+    "no-unexpected-multiline": "off",
+    "@typescript-eslint/no-extra-semi": "warn"
   },
   "settings": {
     "import/parsers": {

@@ -18,13 +18,22 @@ export const minItem = <T>(items: T[], toNumber: (it: T) => number): T =>
     )[0];
 
 /**
- * Returns the smallest value out of the given `numbers`.
- * 
- * @example
- * min(1, 43, 2.3, 5, -2) => -2
- */
-export const min = (...numbers: number[]): number =>
-  numbers.reduce(
+* Returns the smallest value out of the given `numbers`.
+* 
+* @example
+* min([1, 43, 2.3, 5, -2]) => -2
+* min(1, 43, 2.3, 5, -2) => -2
+*/
+export function min(...numbers: number[]): number;
+export function min(numbers: number[]): number;
+export function min(...args: any[]): number {
+  if (args.length > 1 || !Array.isArray(args[0])) {
+    return min(args);
+  }
+
+  const [numbers] = args;
+  return numbers.reduce(
     (m, x) => Math.min(m, x),
     Infinity
   );
+}
