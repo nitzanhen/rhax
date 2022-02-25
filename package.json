@@ -21,20 +21,19 @@
     "test": "jest",
     "prebuild": "rimraf dist",
     "build": "parcel build",
-    "postbuild": "rimraf .temp",
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
-    "tsc": "tsc -p ./tsconfig.build.json",
+    "tsc": "tsc",
     "preversion": "yarn lint && yarn build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhaxjs/rhax.git"
+    "url": "git+https://github.com/NitzanHen/rhax.git"
   },
   "bugs": {
-    "url": "https://github.com/rhaxjs/rhax/issues"
+    "url": "https://github.com/NitzanHen/rhax/issues"
   },
-  "homepage": "https://github.com/rhaxjs/rhax/#readme",
+  "homepage": "https://github.com/NitzanHen/rhax",
   "files": [
     "dist"
   ],
