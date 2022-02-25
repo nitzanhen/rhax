@@ -18,9 +18,9 @@ export function filter(...args: any[]) {
   return arr.filter(predicate);
 }
 
-export function filterObject<O extends object>(obj: O, predicate: ObjectPredicate<O>): O;
-export function filterObject<O extends object>(predicate: ObjectPredicate<O>): (obj: O) => O;
-export function filterObject(...args: any[]) {
+function filterObject<O extends object>(obj: O, predicate: ObjectPredicate<O>): O;
+function filterObject<O extends object>(predicate: ObjectPredicate<O>): (obj: O) => O;
+function filterObject(...args: any[]) {
   if (args.length === 1 && typeof args[0] === 'function') {
     const predicate = args[0];
     return (obj: any) => filter(obj, predicate);

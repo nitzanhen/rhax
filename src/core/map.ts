@@ -18,9 +18,9 @@ export function map(...args: any[]) {
   return arr.map(mapper);
 }
 
-export function mapObject<O extends object, W>(mapper: ObjectMapper<O, W>): (obj: O) => Record<keyof O, W>;
-export function mapObject<O extends object, W>(obj: O, mapper: ObjectMapper<O, W>): Record<keyof O, W>;
-export function mapObject(...args: any[]) {
+function mapObject<O extends object, W>(mapper: ObjectMapper<O, W>): (obj: O) => Record<keyof O, W>;
+function mapObject<O extends object, W>(obj: O, mapper: ObjectMapper<O, W>): Record<keyof O, W>;
+function mapObject(...args: any[]) {
   if (args.length === 1 && typeof args[0] === 'function') {
     const mapper = args[0];
     return (obj: any) => map(obj, mapper);
