@@ -1,10 +1,10 @@
 
-import { ValueOf } from '../utils/types';
+import { ObjectKey, ValueOf } from '../utils/types';
 import { entries, tuple } from '../core/helpers';
 import { toObject } from './toObject';
 
 export type ArrayMapper<E, W> = (el: E, index: number) => W;
-export type ObjectMapper<O extends object, W> = (value: ValueOf<O>, key: keyof O) => W;
+export type ObjectMapper<K extends ObjectKey, V, W> = (value: V, key: K) => W;
 
 export function map<E, W>(arr: E[], mapper: ArrayMapper<E, W>): W[];
 export function map<E, W>(mapper: ArrayMapper<E, W>): (arr: E[]) => W[];
@@ -18,8 +18,8 @@ export function map(...args: any[]) {
   return arr.map(mapper);
 }
 
-function mapObject<O extends object, W>(mapper: ObjectMapper<O, W>): (obj: O) => Record<keyof O, W>;
-function mapObject<O extends object, W>(obj: O, mapper: ObjectMapper<O, W>): Record<keyof O, W>;
+function mapObject<K extends ObjectKey, V, W>(mapper: ObjectMapper<K, V, W>): <O extends Record<K, V>>(obj: O) => Record<keyof O, W>;
+function mapObject<O extends object, W>(obj: O, mapper: ObjectMapper<keyof O, ValueOf<O>, W>): Record<keyof O, W>;
 function mapObject(...args: any[]) {
   if (args.length === 1 && typeof args[0] === 'function') {
     const mapper = args[0];
