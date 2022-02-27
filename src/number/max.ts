@@ -8,7 +8,7 @@ import { tuple } from '../core/helpers';
  * @param toNumber a function that transforms each item to a number
  * 
  * @example
- * minItem(['a', '32f', '#ffd'], s => s.length) => '#ffd'
+ * maxItem(['a', '32f', '#ffd'], s => s.length) => '#ffd'
  */
 export const maxItem = <T>(items: T[], toNumber: (it: T) => number): T =>
   items.map(it => tuple(it, toNumber(it)))
@@ -21,8 +21,8 @@ export const maxItem = <T>(items: T[], toNumber: (it: T) => number): T =>
 * Returns the largest value out of the given `numbers`.
 * 
 * @example
-* min([1, 43, 2.3, 5, -2]) => 43
-* min(1, 43, 2.3, 5, -2) => 43
+* max([1, 43, 2.3, 5, -2]) => 43
+* max(1, 43, 2.3, 5, -2) => 43
 */
 export function max(...numbers: number[]): number;
 export function max(numbers: number[]): number;
@@ -34,6 +34,6 @@ export function max(...args: any[]): number {
   const [numbers] = args;
   return numbers.reduce(
     (m, x) => Math.max(m, x),
-    Infinity
+    -Infinity
   );
 }
