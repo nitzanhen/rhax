@@ -1,8 +1,8 @@
-import { ValueOf } from '../utils/types';
+import { ObjectKey, ValueOf } from '../utils/types';
 import { entries } from '../core/helpers';
 
 export type ArrayReducer<E, A> = (acc: A, el: E, index: number) => A;
-export type ObjectReducer<O extends object, A> = (acc: A, value: ValueOf<O>, key: keyof O) => A;
+export type ObjectReducer<K extends ObjectKey, V, A> = (acc: A, value: V, key: K) => A;
 
 export function reduce<E, A>(arr: E[], reducer: ArrayReducer<E, A>, initialValue: A): A;
 export function reduce<E, A>(reducer: ArrayReducer<E, A>, initialValue: A): (arr: E[]) => A;
@@ -15,18 +15,29 @@ export function reduce(...args: any[]) {
   const [arr, reducer, initialValue] = args;
   return arr.length === 0
     ? initialValue
-    : arr.reduce(reducer, initialValue);
+    : (arr as any[]).reduce(
+      (acc, v, k) => reducer(acc, v, k),
+      initialValue
+    );
 }
 
-
-export const reduceObject = <O extends object, A>(obj: O, reducer: ObjectReducer<O, A>, initialValue: A): A => {
-  const objEntries = entries(obj);
-  if (objEntries.length === 0) {
-    return initialValue;
+function reduceObject<O extends Object, A>(obj: O, reducer: ObjectReducer<keyof O, ValueOf<O>, A>, initialValue: A): A;
+function reduceObject<K extends ObjectKey, V, A>(reducer: ObjectReducer<K, V, A>, initialValue: A): A;
+function reduceObject(...args: any[]) {
+  if (args.length <= 2 && typeof args[0] === 'function') {
+    const [reducer, initialValue] = args;
+    return (obj: object) => reduceObject(obj, reducer, initialValue);
   }
 
-  return objEntries.reduce(
-    (acc, [k, v]) => reducer(acc, v, k),
-    initialValue
-  );
-};
+  const [obj, reducer, initialValue] = args;
+  const objEntries = entries(obj);
+
+  return objEntries.length === 0
+    ? initialValue
+    : objEntries.reduce(
+      (acc, [k, v]) => reducer(acc, v, k),
+      initialValue
+    );
+}
+
+reduce.object = reduceObject;
