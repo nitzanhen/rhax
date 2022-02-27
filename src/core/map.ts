@@ -23,7 +23,7 @@ function mapObject<O extends object, W>(obj: O, mapper: ObjectMapper<keyof O, Va
 function mapObject(...args: any[]) {
   if (args.length === 1 && typeof args[0] === 'function') {
     const mapper = args[0];
-    return (obj: any) => map(obj, mapper);
+    return (obj: any) => mapObject(obj, mapper);
   }
 
   const [obj, mapper] = args;

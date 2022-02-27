@@ -15,6 +15,7 @@ export function filter(...args: any[]) {
   }
 
   const [arr, predicate] = args;
+  
   return arr.filter(predicate);
 }
 
@@ -23,7 +24,7 @@ function filterObject<O extends object>(obj: O, predicate: ObjectPredicate<keyof
 function filterObject(...args: any[]) {
   if (args.length === 1 && typeof args[0] === 'function') {
     const predicate = args[0];
-    return (obj: any) => filter(obj, predicate);
+    return (obj: any) => filterObject(obj, predicate);
   }
 
   const [obj, predicate] = args;
