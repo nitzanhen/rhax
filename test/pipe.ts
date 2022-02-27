@@ -1,6 +1,0 @@
-
-describe('pipe', () => {
-
-  test.skip('', () => {});
-
-});
