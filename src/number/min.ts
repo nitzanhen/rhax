@@ -11,12 +11,22 @@ import { tuple } from '../core/helpers';
  * @example
  * minItem(['a', '32f', '#ffd'], s => s.length) => 'a'
  */
-export const minItem = <T>(items: T[], toNumber: (it: T) => number): T =>
-  items.map(it => tuple(it, toNumber(it)))
+export function minItem<T>(items: T[], toNumber: (it: T) => number): T;
+export function minItem<T>(toNumber: (it: T) => number): (items: T[]) => T;
+export function minItem(...args: any[]) {
+  if (args.length === 1 && typeof args[0] === 'function') {
+    const [toNumber] = args;
+    return (items: any[]) => minItem(items, toNumber);
+  }
+
+  const [items, toNumber] = args;
+  return (items as any[])
+    .map(it => tuple(it, toNumber(it)))
     .reduce(
-      (minPair, pair) => (minPair[1] < pair[1]) ? minPair : pair,
-      [undefined as unknown as T, Infinity]
+      (minPair, pair) => (minPair[1] <= pair[1]) ? minPair : pair,
+      [undefined, Infinity]
     )[0];
+}
 
 /**
 * Returns the smallest value out of the given `numbers`.

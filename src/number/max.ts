@@ -10,12 +10,22 @@ import { tuple } from '../core/helpers';
  * @example
  * maxItem(['a', '32f', '#ffd'], s => s.length) => '#ffd'
  */
-export const maxItem = <T>(items: T[], toNumber: (it: T) => number): T =>
-  items.map(it => tuple(it, toNumber(it)))
+export function maxItem<T>(items: T[], toNumber: (it: T) => number): T;
+export function maxItem<T>(toNumber: (it: T) => number): (items: T[]) => T;
+export function maxItem(...args: any[]) {
+  if (args.length === 1 && typeof args[0] === 'function') {
+    const [toNumber] = args;
+    return (items: any[]) => maxItem(items, toNumber);
+  }
+
+  const [items, toNumber] = args;
+  return (items as any[])
+    .map(it => tuple(it, toNumber(it)))
     .reduce(
-      (minPair, pair) => (minPair[1] > pair[1]) ? minPair : pair,
-      [undefined as unknown as T, Infinity]
+      (maxPair, pair) => (maxPair[1] >= pair[1]) ? maxPair : pair,
+      [undefined, -Infinity]
     )[0];
+}
 
 /**
 * Returns the largest value out of the given `numbers`.
