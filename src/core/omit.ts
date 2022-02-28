@@ -13,5 +13,5 @@ export function omit(...args: any[]) {
   const [obj, ...keys] = args;
   const keySet = new Set(keys);
 
-  return filter.object(obj, (_, k) => keySet.has(k));
+  return filter.object(obj, (_, k) => !keySet.has(k));
 }
