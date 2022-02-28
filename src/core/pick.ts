@@ -1,9 +1,10 @@
+import { ObjectKey } from '../utils/types';
 import { tuple } from './helpers';
 import { toObject } from './toObject';
 
 
 export function pick<O extends object, K extends keyof O>(obj: O, ...keys: K[]): Pick<O, K>;
-export function pick<O extends object, K extends keyof O>(...keys: K[]): (obj: O) => Pick<O, K>;
+export function pick<K extends ObjectKey>(...keys: K[]): <O extends Record<K, any>>(obj: O) => Pick<O, K>;
 export function pick(...args: any[]) {
   if (typeof args[0] !== 'object') {
     const keys = args;
