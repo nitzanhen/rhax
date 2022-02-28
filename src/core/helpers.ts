@@ -1,6 +1,6 @@
 import { EntryOf, ValueOf } from '../utils/types';
 
-export const entries = <O extends object>(obj: O): [keyof O, ValueOf<O>][] => Object.entries(obj) as EntryOf<O>[];
+export const entries = <O extends object>(obj: O): EntryOf<O>[] => Object.entries(obj) as EntryOf<O>[];
 
 export const keys = <O extends object>(obj: O): (keyof O)[] => Object.keys(obj) as (keyof O)[];
 
