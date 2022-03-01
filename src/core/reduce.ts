@@ -22,7 +22,7 @@ export function reduce(...args: any[]) {
 }
 
 function reduceObject<O extends Object, A>(obj: O, reducer: ObjectReducer<keyof O, ValueOf<O>, A>, initialValue: A): A;
-function reduceObject<K extends ObjectKey, V, A>(reducer: ObjectReducer<K, V, A>, initialValue: A): A;
+function reduceObject<K extends ObjectKey, V, A>(reducer: ObjectReducer<K, V, A>, initialValue: A): <O extends Record<K ,V>>(obj: O) => A;
 function reduceObject(...args: any[]) {
   if (args.length <= 2 && typeof args[0] === 'function') {
     const [reducer, initialValue] = args;
