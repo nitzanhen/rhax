@@ -1,10 +1,12 @@
-import { EntryOf, ValueOf } from '../utils/types';
+import { EntryOf, ObjectKey, ValueOf } from '../utils/types';
 
 export const entries = <O extends object>(obj: O): EntryOf<O>[] => Object.entries(obj) as EntryOf<O>[];
 
 export const keys = <O extends object>(obj: O): (keyof O)[] => Object.keys(obj) as (keyof O)[];
 
 export const values = <O extends object>(obj: O): ValueOf<O>[] => Object.values(obj) as ValueOf<O>[];
+
+export const toObject = <K extends ObjectKey, V>(entries: [K, V][]): Record<K, V> => Object.fromEntries(entries) as Record<K, V>;
 
 export const isEmpty = (obj: object) => keys(obj).length === 0;
 

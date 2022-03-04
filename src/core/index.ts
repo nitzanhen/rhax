@@ -8,5 +8,4 @@ export * from './map';
 export * from './omit';
 export * from './pick';
 export * from './reduce';
-export * from './toObject';
 export * from './zip';

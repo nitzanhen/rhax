@@ -1,6 +1,5 @@
 import { ObjectKey } from '../utils/types';
-import { tuple } from './helpers';
-import { toObject } from './toObject';
+import { toObject, tuple } from './helpers';
 
 
 export function pick<O extends object, K extends keyof O>(obj: O, ...keys: K[]): Pick<O, K>;

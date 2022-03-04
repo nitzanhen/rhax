@@ -1,7 +1,6 @@
 
 import { ObjectKey, ValueOf } from '../utils/types';
-import { entries, tuple } from '../core/helpers';
-import { toObject } from './toObject';
+import { entries, toObject, tuple } from '../core/helpers';
 
 export type ArrayMapper<E, W> = (el: E, index: number) => W;
 export type ObjectMapper<K extends ObjectKey, V, W> = (value: V, key: K) => W;
