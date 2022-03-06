@@ -2,7 +2,6 @@ export * from './filter';
 export * from './find';
 export * from './groupBy';
 export * from './helpers';
-export * from './indexArray';
 export * from './makeArray';
 export * from './map';
 export * from './omit';
