@@ -26,5 +26,13 @@ describe('zip', () => {
     expect(
       zip([1, 2, 3, 4], [])
     ).toEqual([]);
+
+    expect(
+      zip(['a'], ['b'], ['c'], ['d'])
+    ).toEqual([['a', 'b', 'c', 'd']]);
+
+    expect(
+      zip(['a', 'b', 'c', 'd'], [1, 2, 3, 4, 5], [[1], [2], [3], [4]], [true, false])
+    ).toEqual([['a', 1, [1], true], ['b', 2, [2], false]]);
   });
 });
