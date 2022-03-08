@@ -1,5 +1,4 @@
 export * from './filter';
-export * from './find';
 export * from './groupBy';
 export * from './helpers';
 export * from './makeArray';
