@@ -45,12 +45,10 @@ export function reduce(...args: any[]) {
   }
 
   const [arr, reducer, initialValue] = args;
-  return arr.length === 0
-    ? initialValue
-    : (arr as any[]).reduce(
-      (acc, v, k) => reducer(acc, v, k),
-      initialValue
-    );
+  return (arr as any[]).reduce(
+    (acc, e, i) => reducer(acc, e, i),
+    initialValue
+  );
 }
 
 /**
@@ -86,7 +84,7 @@ function reduceObject<O extends Object, A>(obj: O, reducer: ObjectReducer<keyof 
  * const allNums = flatten(arrs);
  * console.log(allNums); // [0, 3, 6, 1, 4, 7, 2, 5, 8]
  */
-function reduceObject<K extends ObjectKey, V, A>(reducer: ObjectReducer<K, V, A>, initialValue: A): <O extends Record<K ,V>>(obj: O) => A;
+function reduceObject<K extends ObjectKey, V, A>(reducer: ObjectReducer<K, V, A>, initialValue: A): <O extends Record<K, V>>(obj: O) => A;
 function reduceObject(...args: any[]) {
   if (args.length <= 2 && typeof args[0] === 'function') {
     const [reducer, initialValue] = args;
@@ -94,14 +92,11 @@ function reduceObject(...args: any[]) {
   }
 
   const [obj, reducer, initialValue] = args;
-  const objEntries = entries(obj);
 
-  return objEntries.length === 0
-    ? initialValue
-    : objEntries.reduce(
-      (acc, [k, v]) => reducer(acc, v, k),
-      initialValue
-    );
+  return entries(obj).reduce(
+    (acc, [k, v]) => reducer(acc, v, k),
+    initialValue
+  );
 }
 
 reduce.object = reduceObject;
