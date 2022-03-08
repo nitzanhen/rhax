@@ -22,7 +22,8 @@
     "postbuild": "rimraf .temp",
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
-    "preversion": "yarn lint && yarn build"
+    "preversion": "yarn lint && yarn build",
+    "makedocs": "node generateDocs.mjs"
   },
   "repository": {
     "type": "git",
