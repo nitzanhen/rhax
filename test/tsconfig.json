@@ -2,11 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "../src",
-    "paths": {
-      "test-data": [
-        "../test/testdata"
-      ],
-    },
+    "isolatedModules": false,
     "resolveJsonModule": true
   },
 }

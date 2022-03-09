@@ -1,8 +1,23 @@
 import { makeArray } from '../core/makeArray';
 import { tuple } from './helpers';
 
-export const zip = <T, S>(arr1: T[], arr2: S[]): [T, S][] => 
+export type Zipped<Arrs extends [...any[]]> = Arrs extends [(infer H)[], ...(infer T)]
+  ? [H, ...Zipped<T>]
+  : [];
+
+/**
+ * 
+ * 
+ * @param arrs arrays to zip. 
+ * 
+ * @example
+ * const zipped = zip([1, 2], ['a', 'b'], ['c', 'd']);
+ * 
+ * // zipped is of type [number, string, string][]
+ * console.log(zipped); // [[1, 'a', 'c'], [2, 'b', 'd']];
+ */
+export const zip = <Arrs extends any[][]>(...arrs: Arrs): Zipped<Arrs>[] =>
   makeArray(
-    Math.min(arr1.length, arr2.length),
-    i => tuple(arr1[i], arr2[i])
+    Math.min(...arrs.map(a => a.length)),
+    i => tuple(...arrs.map(a => a[i])) as Zipped<Arrs>
   );
