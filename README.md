@@ -1,7 +1,7 @@
 # Rhax
 
 [![language](https://img.shields.io/github/languages/top/rhaxjs/rhax?color=blue&logo=typescript)](https://github.com/rhaxjs/rhax/search?l=typescript)
-[![codecov](https://codecov.io/gh/rhaxjs/rhax/branch/main/graph/badge.svg?token=2nQUFAqZ24)](https://codecov.io/gh/rhaxjs/rhax)
+[![codecov](https://codecov.io/gh/nitzanhen/rhax/branch/main/graph/badge.svg)](https://codecov.io/gh/rhaxjs/rhax)
 [![npm](https://img.shields.io/npm/v/rhax?logo=npm&color=CB3837)](https://www.npmjs.com/package/rhax)
 [![license](https://img.shields.io/github/license/rhaxjs/rhax?color=yellow)](https://choosealicense.com/licenses/mit/)
 
