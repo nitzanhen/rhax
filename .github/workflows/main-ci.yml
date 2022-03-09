@@ -24,6 +24,6 @@ jobs:
         run: yarn test --coverage
 
       - name: Test coverage
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2
         with:
           name: rhax-codecov
