@@ -1,11 +1,12 @@
-import { join, dirname } from 'path';
+import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { writeFileSync } from 'fs';
 import TypeDoc, { ReflectionKind } from 'typedoc';
-import { pipe, map, pick } from './dist/index.mjs';
+import { pipe, map, pick } from '../dist/index.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const entrypoint = join(__dirname, 'src', 'index.ts');
+const rootdir = resolve(__dirname, '..');
+const entrypoint = join(rootdir, 'src', 'index.ts');
 const outputPath = join(__dirname, 'rhax.api.json');
 
 const logNoParent = (t) => {
@@ -19,7 +20,12 @@ const logNoParent = (t) => {
  */
 const parseNamespace = (ns) => {
   const name = ns.name;
-  return ns.getChildrenByKind(ReflectionKind.Variable).flatMap(v => parseVariable(v, name));
+  /** @todo support for non-variable children */
+  const parsedVariables = ns
+    .getChildrenByKind(ReflectionKind.Variable)
+    .flatMap(v => parseVariable(v, name));
+
+  return;
 };
 
 /**
@@ -31,27 +37,39 @@ const parseNamespace = (ns) => {
 const parseVariable = (v, namespace) => {
   const prefix = namespace && (namespace + '.');
 
-  const types = parseType(v.type);
+  const types = parseVariantsByType(v.type);
+  console.log(types);
+  //logNoParent(v);
 
-  return types.map(t => `${prefix}${v.name}${t}`);
+  return types.map(t => `${prefix}${v.name}${t.signature}`);
 };
 
 /**
  * 
  * @param {TypeDoc.Type} t
  */
-const parseType = (t) => {
+const parseVariantsByType = (t) => {
 
   switch (t.type) {
     case 'array': {
-      return [`${parseType(t.elementType)}[]`];
+      const elementVariants = parseVariantsByType(t.elementType);
+      return elementVariants.map(v => ({ ...v, signature: `${v.signature}[]` }));
     }
     case 'reflection': {
       /** @type {TypeDoc.DeclarationReflection} */
       const declaration = t.declaration;
-      return declaration.signatures.map(sig => parseSignature(sig).signature);
+      return declaration.signatures.map(parseVariant);
     }
-    default: return [t.toString()];
+    case 'intrinsic': {
+      return {
+        name: t.name,
+        signature: t.toString(),
+      };
+    }
+    default: {
+      console.log(t.type);
+      return [t.toString()];
+    }
   }
 };
 
@@ -59,24 +77,24 @@ const parseType = (t) => {
  * 
  * @param {TypeDoc.SignatureReflection} signature
  */
-const parseSignature = (signature) => {
+const parseVariant = (signature) => {
   const { typeParameters, parameters, comment, sources } = signature;
 
   const name = signature.name !== '__type' ? signature.name : undefined;
 
   const generics = typeParameters &&
     pipe(typeParameters)
-      (map(({ name, type }) => type ? `${name} extends ${parseType(type)}` : name))
+      (map(({ name, type }) => type ? `${name} extends ${parseVariantsByType(type)}` : name))
       (gens => `<${gens.join(', ')}>`)
       .go();
 
   const params = parameters &&
     pipe(parameters)
-      (map(({ name, type }) => `${name}: ${type ? parseType(type) : ''}`))
+      (map(({ name, type }) => `${name}: ${type ? parseVariantsByType(type) : ''}`))
       (params => params.join(', '))
       .go();
 
-  const type = signature.type && ` => ${parseType(signature.type)}`;
+  const type = signature.type && ` => ${parseVariantsByType(signature.type)}`;
 
   const signatureString = `${name ?? ''}${generics ?? ''}(${params ?? ''})${type ?? ''}`;
 
@@ -97,7 +115,7 @@ const parseSignature = (signature) => {
  */
 const parseFunction = (fn) => {
 
-  const signatures = fn.signatures.map(parseSignature);
+  const signatures = fn.signatures.map(parseVariant);
   const source = signatures[0].source;
   if (!signatures.every(s => s.source === source)) {
     throw new Error('encountered a function with multiple sources');
@@ -107,8 +125,8 @@ const parseFunction = (fn) => {
 
   return {
     name: fn.name,
+    source,
     variants,
-    source
   };
 };
 
@@ -126,16 +144,18 @@ async function main() {
 
   const project = app.convert();
 
-  const parsed = project.children.flatMap(c => {
+  const parsed = project.getChildrenByKind(ReflectionKind.Namespace).flatMap(c => {
     switch (c.kind) {
       case ReflectionKind.Namespace: return parseNamespace(c);
       case ReflectionKind.Function: return parseFunction(c);
       default: return [c.toString()];
     }
-  }).filter(c => typeof c === 'object')
-    .sort();
+  });
+  //.sort();
 
-  writeFileSync(outputPath, JSON.stringify(parsed, null, 2), { encoding: 'utf-8' });
+  console.log(parsed);
+
+  //writeFileSync(outputPath, JSON.stringify(parsed, null, 2), { encoding: 'utf-8' });
 }
 
 main().catch(console.error);

@@ -23,7 +23,7 @@
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
     "preversion": "yarn lint && yarn build",
-    "makedocs": "node generateDocs.mjs"
+    "makedocs": "cd docs && node generateDocs.mjs"
   },
   "repository": {
     "type": "git",
