@@ -25,5 +25,3 @@ jobs:
 
       - name: Test coverage
         uses: codecov/codecov-action@v2
-        with:
-          name: rhax-codecov
