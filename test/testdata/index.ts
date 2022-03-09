@@ -1,1 +1,0 @@
-export { default as meteorites } from './meteorites.json';
