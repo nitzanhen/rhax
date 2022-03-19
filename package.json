@@ -1,7 +1,7 @@
 {
   "name": "rhax",
   "description": "Typescript library for simple and elegant data transformations",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -23,7 +23,7 @@
     "lint": "eslint src --ext .ts --color",
     "lint:fix": "eslint src --ext .ts --fix --color",
     "preversion": "yarn lint && yarn build && yarn test",
-    "makedocs": "cd docs && node generateDocs.mjs"
+    "makedocs": "cd docs && ts-node generateDocs.ts --swc"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
   ],
   "devDependencies": {
     "@rollup/plugin-eslint": "^8.0.1",
+    "@swc/cli": "^0.1.55",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.16.0",
     "@typescript-eslint/parser": "^4.16.0",
