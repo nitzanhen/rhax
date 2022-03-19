@@ -22,7 +22,7 @@ export type ObjectMapper<K extends ObjectKey, V, W> = (value: V, key: K) => W;
 export function map<E, W>(arr: E[], mapper: ArrayMapper<E, W>): W[];
 
 /**
- * Curried variant of `map`.
+ * Curried variant of `map()`.
  * 
  * @example
  * const double = map((n: number) => n **2)
@@ -44,10 +44,10 @@ export function map(...args: any[]) {
  * Maps an object's values using a given mapper.
  * 
  * The result is another record, with the same keys, whose values are determined by `mapper`.
- * That is, for an record `obj`, `map(obj, mappper)` is another record, and for each entry `k: v` in `obj`,
+ * That is, for a record `obj`, `map(obj, mappper)` is another record, and for each entry `k: v` in `obj`,
  * it will have an entry `k: w` with `w = mapper(v, k)`.
  *  
- * @param obj the array to transform.
+ * @param obj the object to transform.
  * @param mapper the function to map with.
  * 
  * @example
@@ -57,7 +57,7 @@ export function map(...args: any[]) {
 function mapObject<O extends object, W>(obj: O, mapper: ObjectMapper<keyof O, ValueOf<O>, W>): Record<keyof O, W>;
 
 /**
- * Curried variant of `map.object`.
+ * Curried variant of `map.object()`.
  * 
  * @example
  * const double = map.object((n: number) => n **2);
