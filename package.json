@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "sideEffects": false,
   "types": "dist/index.d.ts",
   "exports": {
     "import": "./dist/index.mjs",
