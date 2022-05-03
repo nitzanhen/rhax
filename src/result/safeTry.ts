@@ -1,6 +1,6 @@
-import { err, ok, Result } from './Result';
+import { err, ok } from './Result';
 
-export const safeTry = <T, E = unknown>(op: () => T): Result<T, E> => {
+export const safeTry = <T, E = unknown>(op: () => T) => {
   try {
     return ok(op());
   }
