@@ -1,0 +1,22 @@
+name: Publish
+
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: New version to set
+        required: true
+      tag:
+        type: string
+        description: Optional tag to use for this publish
+        default: latest
+        required: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # preversion script takes care of linting, building and testing
+    - run: yarn publish --new-version ${{ github.event.inputs.version }} 
