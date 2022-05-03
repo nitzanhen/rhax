@@ -29,7 +29,9 @@ jobs:
 
       # preversion script takes care of linting, building and testing
       - name: Publish
-        run: yarn publish --new-version ${{ github.event.inputs.version }}
+        run: |
+          yarn config set npmAuthToken "$NPM_TOKEN"
+          yarn publish --new-version ${{ github.event.inputs.version }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       
