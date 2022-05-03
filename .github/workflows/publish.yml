@@ -20,5 +20,5 @@ jobs:
     steps:
     # preversion script takes care of linting, building and testing
     - run: yarn publish --new-version ${{ github.event.inputs.version }}
-    - env:
+      env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
