@@ -1,7 +1,7 @@
 {
   "name": "rhax",
   "description": "Typescript library for simple and elegant data transformations",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "sideEffects": false,
