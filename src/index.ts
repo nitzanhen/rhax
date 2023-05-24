@@ -3,5 +3,3 @@ export * from './number';
 export * from './result';
 
 export * from './utils/types';
-
-export * from './pipe';
