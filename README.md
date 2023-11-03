@@ -1,6 +1,5 @@
 > [!IMPORTANT]
-> This project is discontinued. <br/>
-> The original motivation behind it - in all its different forms over the years - was to provide functional-programming style tools that replace some of JavaScript's quirks and inconveniences with elegant, foolproof, perfectly typed and easy to use utilities. It contains some good ideas - one of which evolved into [pips](https://github.com/NitzanHen/pips), for example - but at the end of the day I couldn't manage to achieve code that filled ticked all these boxes while also being innovative enough to justify its existence.
+> *This project is discontinued.* The original motivation behind it - in all its different forms over the years - was to provide functional-programming style tools that replace some of JavaScript's quirks and inconveniences with elegant, foolproof, perfectly typed and easy to use utilities. It contains some good ideas - one of which evolved into [pips](https://github.com/NitzanHen/pips), for example - but at the end of the day I couldn't manage to achieve code that filled ticked all these boxes while also being innovative enough to justify its existence.
 
 # Rhax
 
